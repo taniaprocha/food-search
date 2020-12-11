@@ -1,0 +1,7 @@
+.root {
+  margin: 1rem;
+}
+
+.links > * + * {
+  margin-left: 1rem;
+}
