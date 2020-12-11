@@ -10,7 +10,7 @@ You can replace the app name `foodsearch` with your own name, and use it to setu
 
 To run this project you will need the following tools and runtimes:
 
-- Ruby 2.7.1
+- Ruby 2.7.2
 - Node 12.\*
 - Postgres 10 and greater
 - Chromedriver
