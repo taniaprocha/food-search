@@ -5,3 +5,9 @@ export async function getFood() {
 
   return response.data;
 }
+
+export async function createFood(data) {
+  const response = await redaxios.post("/foods", data);
+
+  return response;
+}

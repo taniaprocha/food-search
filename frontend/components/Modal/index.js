@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { createFood } from "root/api/foods";
 
 import "./index.css";
 
@@ -13,6 +14,17 @@ const Modal = ({ onClose, data }) => {
   const [protein, setProtein] = useState(data ? data.protein : null);
 
   const handleRemove = () => {};
+
+  const handleCreate = () => {
+    createFood({
+      name,
+      energy,
+      fat,
+      carbohydrates,
+      protein,
+    });
+    onClose(true);
+  };
 
   const handleSave = () => {};
 
@@ -98,18 +110,34 @@ const Modal = ({ onClose, data }) => {
         <div className="buttons">
           {data && <button onClick={handleRemove}>Eliminar</button>}
           <button onClick={onClose}>Cancelar</button>
-          <button
-            disabled={
-              !name ||
-              energy <= 0 ||
-              fat <= 0 ||
-              protein <= 0 ||
-              carbohydrates <= 0
-            }
-            onClick={handleSave}
-          >
-            Gravar e fechar
-          </button>
+          {!data ? (
+            <button
+              disabled={
+                !name ||
+                energy < 0 ||
+                fat < 0 ||
+                protein < 0 ||
+                carbohydrates < 0
+              }
+              onClick={handleCreate}
+            >
+              Criar e fechar
+            </button>
+          ) : null}
+          {data ? (
+            <button
+              disabled={
+                !name ||
+                energy < 0 ||
+                fat < 0 ||
+                protein < 0 ||
+                carbohydrates < 0
+              }
+              onClick={handleSave}
+            >
+              Gravar e fechar
+            </button>
+          ) : null}
         </div>
       </div>
     </div>

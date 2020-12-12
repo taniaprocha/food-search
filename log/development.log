@@ -3396,3 +3396,1063 @@ Processing by FoodsController#index as */*
 Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 2.0ms | Allocations: 3818)
 
 
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:06:07 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (3.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (5.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:06:08.018344"], ["id", 1]]
+Completed 200 OK in 104ms (Views: 20.3ms | ActiveRecord: 9.6ms | Allocations: 17848)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:12:51 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 4)
+  [1m[36mUser Update All (3.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:12:52.021437"], ["id", 1]]
+Completed 200 OK in 23ms (Views: 8.0ms | ActiveRecord: 4.1ms | Allocations: 3734)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:12:52 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:12:52.971084"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2880)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:12:53 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:12:53.192800"], ["id", 1]]
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 1.2ms | Allocations: 3852)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:14:42 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:14:42.055596"], ["id", 1]]
+Completed 200 OK in 24ms (Views: 1.9ms | ActiveRecord: 1.9ms | Allocations: 3419)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:14:42 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:14:42.642216"], ["id", 1]]
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2828)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:14:42 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (1.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:14:42.846353"], ["id", 1]]
+Completed 200 OK in 15ms (Views: 4.7ms | ActiveRecord: 2.1ms | Allocations: 3836)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:16:53 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:16:53.379212"], ["id", 1]]
+Completed 200 OK in 33ms (Views: 14.6ms | ActiveRecord: 1.9ms | Allocations: 3810)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:16:59 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"245", "fat"=>"2.1", "carbohydrates"=>"5", "protein"=>"4", "food"=>{"name"=>"Sandes mista", "energy"=>"245", "fat"=>"2.1", "carbohydrates"=>"5", "protein"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 2007)
+
+
+
+ArgumentError - wrong number of arguments (given 5, expected 1):
+  app/controllers/foods_controller.rb:9:in `create'
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:20:31 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 16.0ms | Allocations: 993)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 34.6ms | Allocations: 7835)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 106.9ms | Allocations: 13473)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 40.9ms | Allocations: 3483)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 8.8ms | Allocations: 1301)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 11.0ms | Allocations: 3082)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:20:32.277230"], ["id", 1]]
+Completed 200 OK in 215ms (Views: 188.9ms | ActiveRecord: 1.3ms | Allocations: 26818)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:22:31 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:22:31.649721"], ["id", 1]]
+Completed 200 OK in 43ms (Views: 2.6ms | ActiveRecord: 13.1ms | Allocations: 13856)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:22:32 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:22:32.248222"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 2920)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:22:32 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:22:32.676529"], ["id", 1]]
+Completed 200 OK in 22ms (Views: 11.1ms | ActiveRecord: 3.8ms | Allocations: 8072)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:22:55 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"234", "fat"=>"1.2", "carbohydrates"=>"3", "protein"=>"2", "food"=>{"name"=>"Sandes mista", "energy"=>"234", "fat"=>"1.2", "carbohydrates"=>"3", "protein"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.2ms | Allocations: 1999)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: foods:
+  app/controllers/foods_controller.rb:15:in `food_params'
+  app/controllers/foods_controller.rb:9:in `create'
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:27:33 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:27:33.168839"], ["id", 1]]
+Completed 200 OK in 33ms (Views: 1.7ms | ActiveRecord: 7.2ms | Allocations: 13693)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:27:33 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:27:33.648635"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2888)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:27:34 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:27:34.519482"], ["id", 1]]
+Completed 200 OK in 35ms (Views: 9.3ms | ActiveRecord: 7.1ms | Allocations: 8070)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:27:58 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"324", "fat"=>"3", "carbohydrates"=>"1.4", "protein"=>"4", "food"=>{"name"=>"Sandes mista", "energy"=>"324", "fat"=>"3", "carbohydrates"=>"1.4", "protein"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :food[0m
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:27:58.159778"], ["id", 1]]
+Completed 201 Created in 7ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 3064)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:28:14 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 1.0ms | Allocations: 771)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 11.7ms | Allocations: 6350)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 15.2ms | Allocations: 8583)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.6ms | Allocations: 3483)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 3.2ms | Allocations: 1287)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.6ms | Allocations: 3082)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:28:14.444855"], ["id", 1]]
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 1.1ms | Allocations: 20745)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:29:43 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:29:43.726110"], ["id", 1]]
+Completed 200 OK in 28ms (Views: 1.9ms | ActiveRecord: 3.8ms | Allocations: 13706)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:29:44 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:29:44.128117"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 2880)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:29:45 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:29:45.109591"], ["id", 1]]
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 3.6ms | Allocations: 8047)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:30:00 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"344", "fat"=>"2", "carbohydrates"=>"1", "protein"=>"3", "food"=>{"name"=>"Sandes mista", "energy"=>"344", "fat"=>"2", "carbohydrates"=>"1", "protein"=>"3"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :food[0m
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:30:00.143350"], ["id", 1]]
+Completed 201 Created in 5ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 3055)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:31:18 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:31:18.083793"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 3409)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:31:18 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (5.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:31:18.453031"], ["id", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 2870)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:31:19 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:31:19.567181"], ["id", 1]]
+Completed 200 OK in 86ms (Views: 46.2ms | ActiveRecord: 7.1ms | Allocations: 18237)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:31:33 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"322", "fat"=>"2", "carbohydrates"=>"2", "protein"=>"2", "food"=>{"name"=>"Sandes mista", "energy"=>"322", "fat"=>"2", "carbohydrates"=>"2", "protein"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :food[0m
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.2ms | Allocations: 4185)
+
+
+
+NoMethodError - undefined method `perform' for #<Food:0x00007fd518caba58>:
+  app/controllers/foods_controller.rb:10:in `create'
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:38:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (2.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:38:18.170396"], ["id", 1]]
+Completed 200 OK in 167ms (Views: 9.6ms | ActiveRecord: 2.9ms | Allocations: 13475)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:38:18 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:38:18.720046"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2918)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:38:19 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:38:19.556120"], ["id", 1]]
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 1.5ms | Allocations: 7898)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:38:32 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"234", "fat"=>"3", "carbohydrates"=>"3", "protein"=>"4", "food"=>{"name"=>"Sandes mista", "energy"=>"234", "fat"=>"3", "carbohydrates"=>"3", "protein"=>"4"}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.3ms | Allocations: 4173)
+
+
+
+NoMethodError - undefined method `perform' for #<Food:0x00007fd51af191d0>:
+  app/controllers/foods_controller.rb:10:in `create'
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:38:50 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:38:50.985692"], ["id", 1]]
+Completed 200 OK in 36ms (Views: 1.9ms | ActiveRecord: 8.0ms | Allocations: 13735)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:38:51 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:38:51.496524"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 2896)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:38:52 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:38:52.457824"], ["id", 1]]
+Completed 200 OK in 28ms (Views: 15.2ms | ActiveRecord: 6.4ms | Allocations: 8058)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:39:05 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"233", "fat"=>"2", "carbohydrates"=>"3", "protein"=>"4", "food"=>{"name"=>"Sandes mista", "energy"=>"233", "fat"=>"2", "carbohydrates"=>"3", "protein"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:39:05.403704"], ["id", 1]]
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 3045)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:39:11 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 1.1ms | Allocations: 770)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 12.2ms | Allocations: 6353)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 15.8ms | Allocations: 8586)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 7.8ms | Allocations: 3482)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 3.6ms | Allocations: 1290)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 4.6ms | Allocations: 3082)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:39:11.940169"], ["id", 1]]
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 1.2ms | Allocations: 20754)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:39:21 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"233", "fat"=>"2", "carbohydrates"=>"3", "protein"=>"4", "food"=>{"name"=>"Sandes mista", "energy"=>"233", "fat"=>"2", "carbohydrates"=>"3", "protein"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:39:21.897928"], ["id", 1]]
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 3033)
+
+
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:40:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:40:20.306874"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 2.3ms | ActiveRecord: 3.5ms | Allocations: 13737)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:40:20 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.1ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:40:20.777853"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 2946)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:40:21 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:40:21.711614"], ["id", 1]]
+Completed 200 OK in 21ms (Views: 9.8ms | ActiveRecord: 3.9ms | Allocations: 8060)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:40:33 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"233", "fat"=>"3", "carbohydrates"=>"2", "protein"=>"4", "food"=>{"name"=>"Sandes mista", "energy"=>"233", "fat"=>"3", "carbohydrates"=>"2", "protein"=>"4"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (3.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sandes mista"], ["energy", 233], ["fat", "3.0"], ["carbohydrates", "2.0"], ["protein", "4.0"], ["created_at", "2020-12-12 22:40:33.096194"], ["updated_at", "2020-12-12 22:40:33.096194"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.8ms | Allocations: 5105)
+
+
+
+ActiveRecord::RecordNotUnique - PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "foods_pkey"
+DETAIL:  Key (id)=(1) already exists.:
+  app/controllers/foods_controller.rb:10:in `create'
+
+Started GET "/admin/foods/1" for 127.0.0.1 at 2020-12-12 22:41:46 +0000
+Processing by Admin::FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_show.html.erb (Duration: 1.1ms | Allocations: 6)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 5.6ms | Allocations: 1915)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 7.2ms | Allocations: 3482)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.8ms | Allocations: 1765)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 5.7ms | Allocations: 3082)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:46.188824"], ["id", 1]]
+Completed 200 OK in 33ms (Views: 23.5ms | ActiveRecord: 1.1ms | Allocations: 15498)
+
+
+Started GET "/admin/foods/1/edit" for 127.0.0.1 at 2020-12-12 22:41:47 +0000
+Processing by Admin::FoodsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/edit.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 1.4ms | Allocations: 197)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_form.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_form.html.erb (Duration: 10.4ms | Allocations: 2145)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/edit.html.erb within layouts/administrate/application (Duration: 14.6ms | Allocations: 3191)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.6ms | Allocations: 3420)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.9ms | Allocations: 1140)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 4.0ms | Allocations: 3000)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:47.751312"], ["id", 1]]
+Completed 200 OK in 38ms (Views: 30.7ms | ActiveRecord: 1.1ms | Allocations: 16791)
+
+
+Started PATCH "/admin/foods/1" for 127.0.0.1 at 2020-12-12 22:41:50 +0000
+Processing by Admin::FoodsController#update as HTML
+  Parameters: {"authenticity_token"=>"p5mW9vOmXb/f9ocmBk9tXbXw25E78Rktwy0d/cOXlKo8anZl3gqIidm7bizEuvDBQRauwYovTQ4s0l/ijJcTBg==", "food"=>{"id"=>"8", "name"=>"Pão de mistura de trigo e centeio", "energy"=>"272", "fat"=>"1.0", "carbohydrates"=>"54.0", "protein"=>"9.0"}, "commit"=>"Update Food", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Update (2.4ms)[0m  [1m[33mUPDATE "foods" SET "id" = $1, "updated_at" = $2 WHERE "foods"."id" = $3[0m  [["id", 8], ["updated_at", "2020-12-12 22:41:50.769426"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/foods/8
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:50.783656"], ["id", 1]]
+Completed 302 Found in 21ms (ActiveRecord: 3.8ms | Allocations: 8533)
+
+
+Started GET "/admin/foods/8" for 127.0.0.1 at 2020-12-12 22:41:50 +0000
+Processing by Admin::FoodsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_show.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 2.5ms | Allocations: 1856)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 7.6ms | Allocations: 3482)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.9ms | Allocations: 1131)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.8ms | Allocations: 3082)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:50.816676"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 18.7ms | ActiveRecord: 1.0ms | Allocations: 14528)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:41:51 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 298)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 8.7ms | Allocations: 6344)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 11.3ms | Allocations: 8048)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 6.5ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.8ms | Allocations: 1121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.6ms | Allocations: 3000)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:51.835533"], ["id", 1]]
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.9ms | Allocations: 19609)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:41:57 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:57.209338"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 3400)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:41:57 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:57.646384"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2826)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:41:58 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:41:58.580973"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 3804)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:42:11 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"233", "fat"=>"3", "carbohydrates"=>"3", "protein"=>"5", "food"=>{"name"=>"Sandes mista", "energy"=>"233", "fat"=>"3", "carbohydrates"=>"3", "protein"=>"5"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.9ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sandes mista"], ["energy", 233], ["fat", "3.0"], ["carbohydrates", "3.0"], ["protein", "5.0"], ["created_at", "2020-12-12 22:42:11.523698"], ["updated_at", "2020-12-12 22:42:11.523698"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.4ms | Allocations: 5090)
+
+
+
+ActiveRecord::RecordNotUnique - PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "foods_pkey"
+DETAIL:  Key (id)=(2) already exists.:
+  app/controllers/foods_controller.rb:10:in `create'
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:42:35 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 10.4ms | Allocations: 6342)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 13.1ms | Allocations: 8019)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.8ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.9ms | Allocations: 1122)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 4.8ms | Allocations: 3001)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:42:35.336339"], ["id", 1]]
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.9ms | Allocations: 19492)
+
+
+Started GET "/admin/foods/2/edit" for 127.0.0.1 at 2020-12-12 22:42:58 +0000
+Processing by Admin::FoodsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/edit.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.4ms | Allocations: 196)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_form.html.erb (Duration: 0.4ms | Allocations: 194)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.4ms | Allocations: 195)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_form.html.erb (Duration: 3.9ms | Allocations: 2108)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/edit.html.erb within layouts/administrate/application (Duration: 5.2ms | Allocations: 2943)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.5ms | Allocations: 3481)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.6ms | Allocations: 1132)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.3ms | Allocations: 3082)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:42:58.045064"], ["id", 1]]
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 1.1ms | Allocations: 15619)
+
+
+Started DELETE "/admin/foods/2" for 127.0.0.1 at 2020-12-12 22:43:03 +0000
+Processing by Admin::FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gqg0BP950mayUzV6XqGnoz1UHfuzn3t8kc8qw9nFqL4ZW9SX0tUHULQe3HCcVDo/ybJoqwJBL19+MGjclsUvEg==", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/foods
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:03.487123"], ["id", 1]]
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms | Allocations: 7841)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:43:03 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.6ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 7.8ms | Allocations: 5038)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 15.7ms | Allocations: 6715)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 7.0ms | Allocations: 3482)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.6ms | Allocations: 1122)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 4.8ms | Allocations: 3082)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:03.526986"], ["id", 1]]
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.9ms | Allocations: 18327)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:43:07 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:07.143566"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.6ms | Allocations: 3416)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:43:07 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (3.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:07.506171"], ["id", 1]]
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 5.3ms | Allocations: 2859)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:43:08 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:08.178175"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.2ms | Allocations: 3666)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:43:21 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sandes mista", "energy"=>"344", "fat"=>"3", "carbohydrates"=>"1", "protein"=>"5", "food"=>{"name"=>"Sandes mista", "energy"=>"344", "fat"=>"3", "carbohydrates"=>"1", "protein"=>"5"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sandes mista"], ["energy", 344], ["fat", "3.0"], ["carbohydrates", "1.0"], ["protein", "5.0"], ["created_at", "2020-12-12 22:43:21.465146"], ["updated_at", "2020-12-12 22:43:21.465146"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:21.469612"], ["id", 1]]
+Completed 201 Created in 10ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 5361)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:43:29 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.6ms | Allocations: 297)
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 9.3ms | Allocations: 6340)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 12.1ms | Allocations: 8017)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.7ms | Allocations: 3482)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.9ms | Allocations: 1122)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 8.5ms | Allocations: 3082)
+  [1m[36mUser Update All (1.1ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:29.914163"], ["id", 1]]
+Completed 200 OK in 40ms (Views: 30.9ms | ActiveRecord: 1.5ms | Allocations: 19607)
+
+
+Started DELETE "/admin/foods/8" for 127.0.0.1 at 2020-12-12 22:43:44 +0000
+Processing by Admin::FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mt/yBXaKs5KxHlbHuX5BZYmuOAuVitJqd9Ic0Q9zUpipLBKWWyZmpLdTv817i9z5fUhNWyRUhkmYLV7OQHPVNA==", "id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/foods
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:44.637307"], ["id", 1]]
+Completed 302 Found in 21ms (ActiveRecord: 1.9ms | Allocations: 7829)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:43:44 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.4ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.2ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 8.5ms | Allocations: 5036)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 11.5ms | Allocations: 6712)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 6.1ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.7ms | Allocations: 1121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 26)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 5.5ms | Allocations: 3000)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:44.674485"], ["id", 1]]
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 0.9ms | Allocations: 18203)
+
+
+Started DELETE "/admin/foods/3" for 127.0.0.1 at 2020-12-12 22:43:46 +0000
+Processing by Admin::FoodsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5SF+hjR4/tr3+4bY2+tcNXF8EV9iyWuXmnslHZgCvsd+0p4VGdQr7PG2b9IZHsGphZpkD9MXP7R1hGcC1wI5aw==", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/foods
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:46.989594"], ["id", 1]]
+Completed 302 Found in 22ms (ActiveRecord: 1.8ms | Allocations: 7826)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:43:46 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.9ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 9.6ms | Allocations: 3733)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 14.3ms | Allocations: 5409)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 11.0ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.4ms | Allocations: 1121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 11.6ms | Allocations: 3000)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:43:47.046931"], ["id", 1]]
+Completed 200 OK in 52ms (Views: 43.6ms | ActiveRecord: 0.8ms | Allocations: 16898)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:44:16 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Pão de mistura de trigo e centeio", "energy"=>"272", "fat"=>"1", "carbohydrates"=>"54", "protein"=>"9", "food"=>{"name"=>"Pão de mistura de trigo e centeio", "energy"=>"272", "fat"=>"1", "carbohydrates"=>"54", "protein"=>"9"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pão de mistura de trigo e centeio"], ["energy", 272], ["fat", "1.0"], ["carbohydrates", "54.0"], ["protein", "9.0"], ["created_at", "2020-12-12 22:44:16.421329"], ["updated_at", "2020-12-12 22:44:16.421329"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:44:16.425492"], ["id", 1]]
+Completed 201 Created in 28ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 5351)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:44:48 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Queijo flamengo light com menos 50% de gordura terra nostra", "energy"=>"235", "fat"=>"13", "carbohydrates"=>"1", "protein"=>"28", "food"=>{"name"=>"Queijo flamengo light com menos 50% de gordura terra nostra", "energy"=>"235", "fat"=>"13", "carbohydrates"=>"1", "protein"=>"28"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Queijo flamengo light com menos 50% de gordura terra nostra"], ["energy", 235], ["fat", "13.0"], ["carbohydrates", "1.0"], ["protein", "28.0"], ["created_at", "2020-12-12 22:44:48.597003"], ["updated_at", "2020-12-12 22:44:48.597003"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:44:48.601300"], ["id", 1]]
+Completed 201 Created in 9ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 5368)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:44:59 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.7ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 9.7ms | Allocations: 6343)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 12.7ms | Allocations: 8020)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.4ms | Allocations: 3482)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.3ms | Allocations: 1122)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 5.8ms | Allocations: 3082)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:44:59.121813"], ["id", 1]]
+Completed 200 OK in 32ms (Views: 27.3ms | ActiveRecord: 0.8ms | Allocations: 19617)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:46:30 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Água mineral natural", "energy"=>"0", "fat"=>"0", "carbohydrates"=>"0", "protein"=>"0", "food"=>{"name"=>"Água mineral natural", "energy"=>"0", "fat"=>"0", "carbohydrates"=>"0", "protein"=>"0"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Água mineral natural"], ["energy", 0], ["fat", "0.0"], ["carbohydrates", "0.0"], ["protein", "0.0"], ["created_at", "2020-12-12 22:46:30.330049"], ["updated_at", "2020-12-12 22:46:30.330049"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:46:30.333781"], ["id", 1]]
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 5354)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:46:33 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 12.7ms | Allocations: 7643)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 15.7ms | Allocations: 9319)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.7ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.7ms | Allocations: 1121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 4.6ms | Allocations: 3055)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:46:33.663499"], ["id", 1]]
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 1.0ms | Allocations: 20839)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:47:05 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Sopa de vegetais", "energy"=>"11", "fat"=>"0", "carbohydrates"=>"1", "protein"=>"1", "food"=>{"name"=>"Sopa de vegetais", "energy"=>"11", "fat"=>"0", "carbohydrates"=>"1", "protein"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sopa de vegetais"], ["energy", 11], ["fat", "0.0"], ["carbohydrates", "1.0"], ["protein", "1.0"], ["created_at", "2020-12-12 22:47:05.976477"], ["updated_at", "2020-12-12 22:47:05.976477"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:47:05.980120"], ["id", 1]]
+Completed 201 Created in 9ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 5358)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-12 22:47:12 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 297)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 15.8ms | Allocations: 8945)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 18.6ms | Allocations: 10621)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 6.8ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.6ms | Allocations: 1121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.9ms | Allocations: 3000)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:47:12.418222"], ["id", 1]]
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 0.9ms | Allocations: 22078)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:47:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:47:17.295779"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 3405)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:47:17 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.1ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:47:17.834832"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 2845)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:47:18 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:47:18.120271"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 3.1ms | ActiveRecord: 1.1ms | Allocations: 4111)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:50:09 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Azeite", "energy"=>"899", "fat"=>"100", "carbohydrates"=>"0", "protein"=>"0", "food"=>{"name"=>"Azeite", "energy"=>"899", "fat"=>"100", "carbohydrates"=>"0", "protein"=>"0"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.3ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Azeite"], ["energy", 899], ["fat", "100.0"], ["carbohydrates", "0.0"], ["protein", "0.0"], ["created_at", "2020-12-12 22:50:09.676416"], ["updated_at", "2020-12-12 22:50:09.676416"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:50:09.681084"], ["id", 1]]
+Completed 201 Created in 10ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 5360)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:50:58 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:50:58.842987"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 1.0ms | Allocations: 4262)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 22:52:06 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:52:06.937961"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 3432)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 22:52:07 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:52:07.617479"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2808)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:52:08 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (2.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:52:08.228730"], ["id", 1]]
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 5.8ms | Allocations: 5998)
+
+
+Started POST "/foods" for 127.0.0.1 at 2020-12-12 22:52:31 +0000
+Processing by FoodsController#create as */*
+  Parameters: {"name"=>"Flocos de aveia", "energy"=>"366", "fat"=>"6", "carbohydrates"=>"62", "protein"=>"14", "food"=>{"name"=>"Flocos de aveia", "energy"=>"366", "fat"=>"6", "carbohydrates"=>"62", "protein"=>"14"}}
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 22:52:31 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Flocos de aveia"], ["energy", 366], ["fat", "6.0"], ["carbohydrates", "62.0"], ["protein", "14.0"], ["created_at", "2020-12-12 22:52:31.583994"], ["updated_at", "2020-12-12 22:52:31.583994"]]
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/foods_controller.rb:10:in `create'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:52:31.588074"], ["id", 1]]
+Completed 201 Created in 10ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 5924)
+
+
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 22:52:31.607763"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 1.9ms | Allocations: 4588)
+
+

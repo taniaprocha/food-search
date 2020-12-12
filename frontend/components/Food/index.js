@@ -5,7 +5,7 @@ import find from "lodash/find";
 
 import "./index.css";
 
-const Food = ({ data }) => {
+const Food = ({ data, onUpdate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedId, setSelectedId] = useState();
 
@@ -19,8 +19,11 @@ const Food = ({ data }) => {
     setIsOpen(true);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (updateFood) => {
     setIsOpen(false);
+    if (updateFood) {
+      onUpdate();
+    }
   };
 
   if (!data) {
@@ -66,6 +69,7 @@ Food.propTypes = {
       protein: PropTypes.number.isRquired,
     })
   ),
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default Food;

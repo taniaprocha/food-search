@@ -28,7 +28,7 @@ export default function Home() {
 
       {user && <div>Hello {user.name}!</div>}
 
-      <Food data={food}></Food>
+      <Food onUpdate={getAllFood} data={food}></Food>
 
       <div className="links">
         {user && user.role === "admin" && <a href="/admin">Admin Area</a>}
