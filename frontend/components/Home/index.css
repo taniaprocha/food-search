@@ -3,5 +3,6 @@
 }
 
 .links > * + * {
+  margin-top: 100px;
   margin-left: 1rem;
 }

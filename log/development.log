@@ -1170,3 +1170,2229 @@ Please, check the "Autoloading and Reloading Constants" guide for solutions.
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5d87b1a856c8b508a79093b5023f4bc800924d89"], ["created_at", "2020-12-11 19:39:17.728934"], ["updated_at", "2020-12-11 19:39:17.728934"]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "foodsearch_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "foodsearch_test" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6440101830672218520)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6440101830672218520)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (39.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "foodsearch_test"[0m
+  [1m[35m (179.6ms)[0m  [1m[35mCREATE DATABASE "foodsearch_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "name" character varying NOT NULL, "role" character varying DEFAULT 'user' NOT NULL, "crypted_password" character varying, "salt" character varying, "last_login_at" timestamp, "last_logout_at" timestamp, "last_activity_at" timestamp, "invalidate_sessions_before" timestamp, "last_login_from_ip_address" character varying, "failed_logins_count" integer DEFAULT 0, "lock_expires_at" timestamp, "unlock_token" character varying, "string" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_invalidate_sessions_before" ON "users"  ("invalidate_sessions_before")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_last_logout_at_and_last_activity_at" ON "users"  ("last_logout_at", "last_activity_at")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_unlock_token" ON "users"  ("unlock_token")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200102105239)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-11 19:46:00.358165"], ["updated_at", "2020-12-11 19:46:00.358165"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-12-11 19:46:00.364491"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5d87b1a856c8b508a79093b5023f4bc800924d89"], ["created_at", "2020-12-11 19:46:00.369688"], ["updated_at", "2020-12-11 19:46:00.369688"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-11 19:48:19 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 295)
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 3812)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-11 19:48:20 +0000
+Processing by SessionsController#show as */*
+Filter chain halted as :require_login rendered or redirected
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 448)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-11 20:08:13 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        rails db:migrate RAILS_ENV=development:
+
+Started POST "/__better_errors/e7afd1f36e77c320/variables" for 127.0.0.1 at 2020-12-11 20:08:13 +0000
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6440101830672218520)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFoods (20201211200244)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.8ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying NOT NULL, "energy" integer NOT NULL, "fat" decimal NOT NULL, "carbohydrates" decimal NOT NULL, "protein" decimal NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211200244"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6440101830672218520)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-11 21:19:42 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 5)
+Completed 200 OK in 42ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 1247)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-11 21:19:43 +0000
+Processing by SessionsController#show as */*
+Filter chain halted as :require_login rendered or redirected
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started POST "/session" for 127.0.0.1 at 2020-12-11 21:33:14 +0000
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"admin@mail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 404 Not Found in 41ms (ActiveRecord: 21.2ms | Allocations: 4665)
+
+
+Started POST "/session" for 127.0.0.1 at 2020-12-11 21:33:17 +0000
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"admin@mail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1862)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@mail.com"], ["LIMIT", 1]]
+  ↳ lib/tasks/populate.rake:4:in `block (2 levels) in <main>'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/tasks/populate.rake:5:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@mail.com"], ["LIMIT", 1]]
+  ↳ lib/tasks/populate.rake:5:in `block (2 levels) in <main>'
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "role", "crypted_password", "salt", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "admin@mail.com"], ["name", "Admin User"], ["role", "admin"], ["crypted_password", "$2a$10$9ANjEoMzTP/FZz69XzMETuLSp7YGwjNsqxgA3vzkF7whWqIgHrleW"], ["salt", "Ermc4KbvxySC47vQV52W"], ["created_at", "2020-12-11 21:35:00.612543"], ["updated_at", "2020-12-11 21:35:00.612543"]]
+  ↳ lib/tasks/populate.rake:5:in `block (2 levels) in <main>'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/tasks/populate.rake:5:in `block (2 levels) in <main>'
+Started POST "/session" for 127.0.0.1 at 2020-12-11 21:35:04 +0000
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"admin@mail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "failed_logins_count" = $1 WHERE "users"."id" = $2[0m  [["failed_logins_count", 0], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_login_at" = $1 WHERE "users"."id" = $2[0m  [["last_login_at", "2020-12-11 21:35:05.150511"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_login_from_ip_address" = $1 WHERE "users"."id" = $2[0m  [["last_login_from_ip_address", "127.0.0.1"], ["id", 1]]
+  ↳ app/controllers/sessions_controller.rb:9:in `create'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:35:05.161617"], ["id", 1]]
+Completed 200 OK in 237ms (Views: 0.4ms | ActiveRecord: 4.2ms | Allocations: 15861)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-12-11 21:35:09 +0000
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 2.2ms | Allocations: 999)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.6ms | Allocations: 131)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered fields/enum_field/_index.html.erb (Duration: 0.6ms | Allocations: 110)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 11.6ms | Allocations: 5723)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 420.5ms | Allocations: 213144)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 824.6ms | Allocations: 99335)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.6ms | Allocations: 88)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 6.3ms | Allocations: 1779)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 1.0ms | Allocations: 213)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 93.7ms | Allocations: 18824)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:35:10.546960"], ["id", 1]]
+Completed 200 OK in 1432ms (Views: 1374.0ms | ActiveRecord: 1.2ms | Allocations: 349442)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-11 21:35:12 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 308)
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 5.0ms | Allocations: 3799)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 18.9ms | Allocations: 10168)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.0ms | Allocations: 3420)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.6ms | Allocations: 1120)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.7ms | Allocations: 3000)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:35:12.897245"], ["id", 1]]
+Completed 200 OK in 46ms (Views: 35.7ms | ActiveRecord: 4.2ms | Allocations: 25388)
+
+
+Started GET "/admin/foods/new" for 127.0.0.1 at 2020-12-11 21:35:15 +0000
+Processing by Admin::FoodsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 5.9ms | Allocations: 1059)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_form.html.erb (Duration: 0.9ms | Allocations: 358)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_form.html.erb (Duration: 11.8ms | Allocations: 4091)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 16.0ms | Allocations: 5761)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.2ms | Allocations: 3420)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 2.0ms | Allocations: 1542)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.7ms | Allocations: 3000)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:35:15.125418"], ["id", 1]]
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.9ms | Allocations: 18473)
+
+
+Started POST "/admin/foods" for 127.0.0.1 at 2020-12-11 21:36:15 +0000
+Processing by Admin::FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"vo2rfEUGXIrQaMi6bYYfXFrsvtC6o5uZD3QbL6PJHNklfkvvaKqJvNYlIbCvc4LArgrLgAt9z7rgi1kw7MmbdQ==", "food"=>{"id"=>"1", "name"=>"Pão de mistura de trigo e centeio", "energy"=>"272", "fat"=>"1", "carbohydrates"=>"54", "protein"=>"9"}, "commit"=>"Create Food"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.5ms)[0m  [1m[32mINSERT INTO "foods" ("id", "name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["id", 1], ["name", "Pão de mistura de trigo e centeio"], ["energy", 272], ["fat", "1.0"], ["carbohydrates", "54.0"], ["protein", "9.0"], ["created_at", "2020-12-11 21:36:15.416994"], ["updated_at", "2020-12-11 21:36:15.416994"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/foods/1
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:36:15.422621"], ["id", 1]]
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms | Allocations: 7391)
+
+
+Started GET "/admin/foods/1" for 127.0.0.1 at 2020-12-11 21:36:15 +0000
+Processing by Admin::FoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.6ms | Allocations: 134)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_show.html.erb (Duration: 0.6ms | Allocations: 122)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.5ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 6.6ms | Allocations: 2830)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.2ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.4ms | Allocations: 1144)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.3ms | Allocations: 3000)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:36:15.455871"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 20.3ms | ActiveRecord: 1.0ms | Allocations: 16495)
+
+
+Started GET "/admin/foods" for 127.0.0.1 at 2020-12-11 21:36:17 +0000
+Processing by Admin::FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 0.5ms | Allocations: 298)
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 8.5ms | Allocations: 5041)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 11.3ms | Allocations: 6717)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 4.4ms | Allocations: 3419)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.3ms | Allocations: 1115)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.0ms | Allocations: 3000)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-11 21:36:17.758694"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 1.2ms | Allocations: 18152)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:17:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+  [1m[36mUser Update All (4.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:17:20.890063"], ["id", 1]]
+Completed 200 OK in 66ms (Views: 8.4ms | ActiveRecord: 7.5ms | Allocations: 13519)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:17:21 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:17:21.271847"], ["id", 1]]
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 5.4ms | Allocations: 2886)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:18:45 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:18:45.493767"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 3421)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:18:46 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:18:46.112160"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2828)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:19:39 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:19:39.103372"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.9ms | Allocations: 3397)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:19:39 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:19:39.697025"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2832)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:20:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:20:13.997905"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.8ms | Allocations: 3419)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:20:14 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:20:14.408091"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2818)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:20:47 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 187)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:20:48.007826"], ["id", 1]]
+Completed 200 OK in 51ms (Views: 8.1ms | ActiveRecord: 10.1ms | Allocations: 16921)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:20:48 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:20:48.683149"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 5.3ms | Allocations: 2904)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:26:36 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:26:36.239637"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.3ms | Allocations: 3564)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:26:36 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (4.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:26:36.754284"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 2826)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:27:25 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:27:25.098669"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2833)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:27:25 +0000
+
+AbstractController::ActionNotFound - The action 'show' could not be found for FoodsController:
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:27:25 +0000
+
+AbstractController::ActionNotFound - The action 'show' could not be found for FoodsController:
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:27:25 +0000
+
+AbstractController::ActionNotFound - The action 'show' could not be found for FoodsController:
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:27:25 +0000
+
+AbstractController::ActionNotFound - The action 'show' could not be found for FoodsController:
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:31:10 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:10.306248"], ["id", 1]]
+Completed 200 OK in 31ms (Views: 1.9ms | ActiveRecord: 6.3ms | Allocations: 13859)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:31:10 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:11.140870"], ["id", 1]]
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 8.8ms | Allocations: 12963)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:31:11 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:11.717141"], ["id", 1]]
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 2.4ms | Allocations: 6956)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:31:11 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:11.731420"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 1.5ms | Allocations: 3400)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:31:26 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:26.050890"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.8ms | Allocations: 3406)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:31:26 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:26.464318"], ["id", 1]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 5.3ms | Allocations: 2820)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:31:27 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:27.081104"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 1.0ms | Allocations: 6253)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:31:27 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:31:27.095337"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.9ms | Allocations: 3413)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:32:31 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:32:31.835583"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 3409)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:32:31 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:32:31.845842"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 3409)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:33:36 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:33:36.717334"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 3393)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:33:37 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:33:37.454392"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2832)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:33:37 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:33:37.991821"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 3.1ms | Allocations: 6253)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:33:37 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:33:38.003301"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 3415)
+
+
+  [1m[36mFood Load (3.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:34:53 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:34:53.711064"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3417)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:34:54 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:34:54.293822"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 2818)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:34:55 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Update All (1.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:34:55.467933"], ["id", 1]]
+Completed 200 OK in 128ms (Views: 2.8ms | ActiveRecord: 14.5ms | Allocations: 13771)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:34:55 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"foods"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:34:55.482317"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 3403)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:36:05 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:36:05.612052"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 3411)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:36:06 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:36:06.059511"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2880)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:36:06 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.3ms | Allocations: 14163)
+
+
+
+NameError - uninitialized constant FoodsController::Foods:
+  app/controllers/foods_controller.rb:5:in `index'
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:36:06 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 4076)
+
+
+
+NameError - uninitialized constant FoodsController::Foods:
+  app/controllers/foods_controller.rb:5:in `index'
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:36:58 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:36:58.495670"], ["id", 1]]
+Completed 200 OK in 28ms (Views: 2.8ms | ActiveRecord: 3.6ms | Allocations: 13716)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:36:58 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:36:58.932438"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2896)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:36:59 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.6ms | Allocations: 5573)
+
+
+
+NameError - uninitialized constant FoodsController::Foods:
+  app/controllers/foods_controller.rb:5:in `index'
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:36:59 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 4084)
+
+
+
+NameError - uninitialized constant FoodsController::Foods:
+  app/controllers/foods_controller.rb:5:in `index'
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:37:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:37:20.826952"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.1ms | Allocations: 3400)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:37:21 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (7.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:37:21.170319"], ["id", 1]]
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 8.6ms | Allocations: 2877)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:37:21 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 6.7ms | Allocations: 5792)
+
+
+
+NameError - uninitialized constant FoodsController::Foods:
+  app/controllers/foods_controller.rb:5:in `index'
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:37:21 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 4108)
+
+
+
+NameError - uninitialized constant FoodsController::Foods:
+  app/controllers/foods_controller.rb:5:in `index'
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:38:43 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:38:43.518588"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 1.7ms | ActiveRecord: 3.7ms | Allocations: 13720)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:38:43 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:38:43.980372"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2890)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:38:44 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:38:44.621359"], ["id", 1]]
+Completed 200 OK in 28ms (Views: 18.3ms | ActiveRecord: 4.6ms | Allocations: 10473)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:38:44 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:38:44.631434"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 3662)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:01 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:01.920292"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 3664)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:01 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:01.930150"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3669)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:22 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:22.194384"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 3662)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:22 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:22.203125"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 3662)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:39:23 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:23.939368"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3378)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:39:24 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:24.494786"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 2820)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:24 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:24.997515"], ["id", 1]]
+Completed 200 OK in 12ms (Views: 3.8ms | ActiveRecord: 2.2ms | Allocations: 6571)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:25 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:25.010401"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 1.1ms | Allocations: 3666)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:52 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:52.241023"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.4ms | Allocations: 3650)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:39:52 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:39:52.250294"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 3650)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:41:24 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:24.559839"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 3405)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:41:25 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:25.162517"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 2806)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:41:31 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:31.340915"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2818)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:41:31 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:31.358898"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 2.1ms | Allocations: 5166)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:41:31 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:31.370778"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 4532)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:41:31 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:31.385145"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.3ms | Allocations: 3674)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:41:31 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:31.393954"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 3674)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:41:35 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:35.153675"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 3421)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:41:35 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:35.665493"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 2816)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:41:36 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.9ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:36.266335"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 2.4ms | Allocations: 6244)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:41:36 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:41:36.279755"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.3ms | Allocations: 3662)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:42:56 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:42:56.132088"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 3411)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:42:56 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (6.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:42:56.742944"], ["id", 1]]
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 10.4ms | Allocations: 2818)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:44:58 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:44:58.632698"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2802)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 15:45:02 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:45:02.664571"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 3401)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 15:45:03 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:45:03.280211"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 2814)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:45:03 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:45:03.795162"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 1.9ms | Allocations: 5423)
+
+
+Started GET "/food" for 127.0.0.1 at 2020-12-12 15:48:40 +0000
+Processing by HomeController#index as */*
+  Parameters: {"path"=>"food"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:48:40.463250"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 1.6ms | Allocations: 5117)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:50:50 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:50:50.898705"], ["id", 1]]
+Completed 200 OK in 42ms (Views: 8.3ms | ActiveRecord: 7.3ms | Allocations: 18076)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:53:30 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:53:30.390417"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 1.9ms | Allocations: 3656)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:55:45 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:55:45.291514"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.1ms | Allocations: 3671)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:56:17 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:56:17.209851"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 2.0ms | Allocations: 3654)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:56:47 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:56:47.664369"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 3662)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 15:58:51 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 15:58:51.442026"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 2.2ms | Allocations: 3675)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:32:11 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:32:11.378905"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 3027)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:32:15 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:32:15.159287"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 3561)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:32:15 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:32:15.955504"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2818)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:32:28 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:32:28.485027"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2830)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:32:44 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:32:44.753294"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 2.0ms | Allocations: 3411)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:32:45 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:32:45.366997"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 2808)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:34:31 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:34:31.178137"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2806)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:35:39 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:35:39.336635"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 3402)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:35:39 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (8.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:35:39.980537"], ["id", 1]]
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 13.0ms | Allocations: 2831)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:36:13 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:36:13.761173"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 4.6ms | Allocations: 2816)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:36:15 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:36:15.811731"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.7ms | Allocations: 3416)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:36:16 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:36:16.343445"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2856)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:37:05 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:05.922849"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2820)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:37:16 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:16.704418"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2810)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:37:18 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:18.568187"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 3417)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:37:19 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (5.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:19.190660"], ["id", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 6.2ms | Allocations: 2834)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:37:38 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:38.307713"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2816)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:37:38 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:38.336651"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 2.2ms | ActiveRecord: 1.9ms | Allocations: 3710)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:37:41 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:41.422523"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2808)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:37:41 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:41.441903"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 3660)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:37:47 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:47.197119"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 3398)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:37:47 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:47.695637"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2820)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:37:48 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:37:48.355912"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.1ms | Allocations: 3672)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:39:50 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:39:50.052691"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2814)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:39:50 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:39:50.081977"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 3669)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:40:13 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:13.506761"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2812)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:40:13 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:13.535638"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 1.8ms | Allocations: 3671)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:40:21 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:21.176920"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.7ms | Allocations: 3396)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:40:21 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:21.831541"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 2806)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:40:22 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:22.363090"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 3660)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:40:42 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:42.329812"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2800)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:40:42 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:42.352323"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 1.0ms | Allocations: 3660)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 16:40:44 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:44.259699"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 3410)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:40:44 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.1ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:44.813424"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 2812)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:40:44 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:40:45.002368"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 1.3ms | Allocations: 3680)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 16:41:33 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:41:33.174357"], ["id", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2809)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 16:41:33 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 16:41:33.200513"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 3660)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:22:07 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+  [1m[36mUser Update All (1.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:22:07.483373"], ["id", 1]]
+Completed 200 OK in 24ms (Views: 5.6ms | ActiveRecord: 4.2ms | Allocations: 3561)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:22:08 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:22:08.158089"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 2808)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:22:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:22:20.945534"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 3413)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:22:21 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:22:21.380866"], ["id", 1]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 7.2ms | Allocations: 2820)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:22:30 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:22:30.177330"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2806)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:23:09 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:09.257421"], ["id", 1]]
+Completed 200 OK in 28ms (Views: 8.8ms | ActiveRecord: 1.0ms | Allocations: 3420)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:23:09 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (7.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:09.954831"], ["id", 1]]
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 13.8ms | Allocations: 2824)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:23:55 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:55.697874"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2810)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:23:55 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:55.755610"], ["id", 1]]
+Completed 200 OK in 28ms (Views: 13.7ms | ActiveRecord: 2.4ms | Allocations: 3692)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:23:58 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:58.088645"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 3413)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:23:58 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:58.699954"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 2871)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:23:58 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (2.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:23:58.847106"], ["id", 1]]
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 3.4ms | Allocations: 4424)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:27:19 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:27:19.440979"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 2.0ms | Allocations: 3431)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:27:20 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:27:20.131363"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2810)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:27:20 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:27:20.714771"], ["id", 1]]
+Completed 200 OK in 19ms (Views: 2.9ms | ActiveRecord: 1.3ms | Allocations: 3668)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:27:39 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:27:39.150027"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 1.8ms | Allocations: 3409)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:27:39 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:27:39.750473"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2811)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:27:40 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:27:40.538649"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.9ms | Allocations: 3658)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:29:09 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:29:09.482638"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 2.3ms | Allocations: 3680)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:29:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:29:13.652585"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 3414)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:29:14 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:29:14.114392"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2818)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:29:14 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:29:14.268167"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 3672)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:29:49 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:29:49.747761"], ["id", 1]]
+Completed 200 OK in 29ms (Views: 4.1ms | ActiveRecord: 1.1ms | Allocations: 3668)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:30:04 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:04.057157"], ["id", 1]]
+Completed 200 OK in 40ms (Views: 3.9ms | ActiveRecord: 2.0ms | Allocations: 3648)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:30:18 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:18.064449"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 3404)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:30:18 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:18.644981"], ["id", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 2818)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:30:18 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:18.801458"], ["id", 1]]
+Completed 200 OK in 31ms (Views: 11.3ms | ActiveRecord: 0.9ms | Allocations: 3682)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:30:35 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:35.403562"], ["id", 1]]
+Completed 200 OK in 71ms (Views: 10.9ms | ActiveRecord: 1.1ms | Allocations: 3413)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:30:35 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:35.906644"], ["id", 1]]
+Completed 200 OK in 24ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 2816)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:30:36 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:36.083540"], ["id", 1]]
+Completed 200 OK in 30ms (Views: 7.4ms | ActiveRecord: 1.4ms | Allocations: 3673)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:30:56 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:56.673497"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 1.3ms | Allocations: 3660)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:30:58 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:58.784030"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 3667)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:30:59 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:30:59.585123"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3420)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:31:00 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:31:00.091046"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 2820)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:31:00 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:31:00.645221"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 2.0ms | Allocations: 3664)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:35:38 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 187)
+  [1m[36mUser Update All (3.1ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:35:38.746922"], ["id", 1]]
+Completed 200 OK in 61ms (Views: 13.3ms | ActiveRecord: 9.7ms | Allocations: 16930)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:36:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:36:17.429078"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.8ms | Allocations: 3412)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:36:35 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:36:35.408044"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 3426)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:37:05 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 187)
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:37:05.410127"], ["id", 1]]
+Completed 200 OK in 42ms (Views: 7.5ms | ActiveRecord: 5.4ms | Allocations: 16930)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:37:13 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:37:13.298448"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 2.0ms | Allocations: 3437)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:38:15 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:38:15.612233"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3391)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:41:23 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:41:23.136418"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.8ms | Allocations: 3391)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:41:41 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 187)
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:41:42.107569"], ["id", 1]]
+Completed 200 OK in 56ms (Views: 7.1ms | ActiveRecord: 8.3ms | Allocations: 16912)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:42:20 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:42:20.518231"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 1.0ms | Allocations: 3429)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:42:27 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:42:27.240256"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3417)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:45:05 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:45:05.069652"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.0ms | Allocations: 3399)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:52:41 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 187)
+  [1m[36mUser Update All (1.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:52:41.570576"], ["id", 1]]
+Completed 200 OK in 58ms (Views: 8.2ms | ActiveRecord: 9.0ms | Allocations: 16934)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:54:12 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:54:12.752693"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 3421)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:54:43 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 187)
+  [1m[36mUser Update All (1.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:54:43.695685"], ["id", 1]]
+Completed 200 OK in 59ms (Views: 7.8ms | ActiveRecord: 6.6ms | Allocations: 16928)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:54:53 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:54:53.495291"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 1.3ms | Allocations: 3423)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:54:53 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:54:53.961975"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 2906)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:54:54 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:54:54.138149"], ["id", 1]]
+Completed 200 OK in 19ms (Views: 9.3ms | ActiveRecord: 5.2ms | Allocations: 8124)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:56:18 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:18.825446"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.7ms | Allocations: 3401)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:56:19 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:19.211394"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2816)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:56:19 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:19.405205"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 1.0ms | Allocations: 3676)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:56:43 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:43.848016"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2824)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:56:43 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:43.863182"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 3662)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 18:56:45 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:45.043128"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 3443)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 18:56:45 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:45.487978"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2820)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 18:56:45 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 18:56:45.641259"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 3664)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:23:56 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:23:56.786006"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 2.0ms | Allocations: 3836)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 19:27:30 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:27:30.881210"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.0ms | Allocations: 3414)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 19:27:31 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:27:31.575013"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 2802)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:27:32 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:27:32.362175"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 3664)
+
+
+Started GET "/admin/foods/new" for 127.0.0.1 at 2020-12-12 19:27:52 +0000
+Processing by Admin::FoodsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/new.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 4.1ms | Allocations: 726)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_form.html.erb (Duration: 1.3ms | Allocations: 358)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.4ms | Allocations: 221)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_form.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_form.html.erb (Duration: 13.2ms | Allocations: 3942)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/new.html.erb within layouts/administrate/application (Duration: 363.5ms | Allocations: 202347)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 72.6ms | Allocations: 12125)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.7ms | Allocations: 85)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 12.0ms | Allocations: 2383)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.7ms | Allocations: 214)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 16.8ms | Allocations: 3490)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:27:52.637492"], ["id", 1]]
+Completed 200 OK in 532ms (Views: 501.7ms | ActiveRecord: 1.1ms | Allocations: 234432)
+
+
+Started POST "/admin/foods" for 127.0.0.1 at 2020-12-12 19:28:47 +0000
+Processing by Admin::FoodsController#create as HTML
+  Parameters: {"authenticity_token"=>"Kn+Nymdt2CDIHNNW5kZaXeuVEqY5dTJzHa5QpIvHbhCxjG1ZSsENFs5ROlwks8fBH3Nn9oirZlDyURK7xMfpvA==", "food"=>{"id"=>"2", "name"=>"Queijo flamengo light com menos 50% de gordura Terra Nostra", "energy"=>"235", "fat"=>"1", "carbohydrates"=>"54", "protein"=>"9"}, "commit"=>"Create Food"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (3.5ms)[0m  [1m[32mINSERT INTO "foods" ("id", "name", "energy", "fat", "carbohydrates", "protein", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["id", 2], ["name", "Queijo flamengo light com menos 50% de gordura Terra Nostra"], ["energy", 235], ["fat", "1.0"], ["carbohydrates", "54.0"], ["protein", "9.0"], ["created_at", "2020-12-12 19:28:47.833195"], ["updated_at", "2020-12-12 19:28:47.833195"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/foods/2
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:28:47.843341"], ["id", 1]]
+Completed 302 Found in 16ms (ActiveRecord: 7.1ms | Allocations: 7394)
+
+
+Started GET "/admin/foods/2" for 127.0.0.1 at 2020-12-12 19:28:47 +0000
+Processing by Admin::FoodsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.6ms | Allocations: 134)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_show.html.erb (Duration: 0.8ms | Allocations: 122)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 1.5ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_show.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/show.html.erb within layouts/administrate/application (Duration: 9.0ms | Allocations: 2877)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 5.1ms | Allocations: 3420)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 1.6ms | Allocations: 1150)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 3.6ms | Allocations: 3000)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:28:47.880841"], ["id", 1]]
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.1ms | Allocations: 16528)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 19:28:51 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:28:51.107658"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 3410)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 19:28:51 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:28:51.530009"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 2830)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:28:52 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:28:52.406724"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 2.2ms | ActiveRecord: 1.3ms | Allocations: 3820)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 19:37:53 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (2.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:37:53.386036"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 2965)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:37:53 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (1.0ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:37:53.418836"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 1.9ms | Allocations: 3840)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 19:39:52 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:39:52.437490"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 2.0ms | Allocations: 3402)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 19:39:53 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:39:53.091653"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 2810)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:39:53 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:39:53.350132"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 3825)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-12 19:40:23 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:40:23.943506"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 3395)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 19:40:24 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:40:24.557983"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 2828)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:40:25 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:40:25.166937"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 1.6ms | Allocations: 3881)
+
+
+Started GET "/session" for 127.0.0.1 at 2020-12-12 19:45:16 +0000
+Processing by SessionsController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:45:16.694883"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 2834)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-12 19:45:16 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:5:in `index'
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-12 19:45:16.719092"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 2.0ms | Allocations: 3818)
+
+

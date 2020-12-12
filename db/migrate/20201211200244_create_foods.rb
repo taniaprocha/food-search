@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+class CreateFoods < ActiveRecord::Migration[6.0]
+  def change
+    create_table :foods do |t|
+      t.string :name, null: false
+      t.integer :energy, null: false
+      t.decimal :fat, null: false
+      t.decimal :carbohydrates, null: false
+      t.decimal :protein, null: false
+
+      t.timestamps
+    end
+  end
+end

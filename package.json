@@ -7,8 +7,7 @@
   },
   "scripts": {
     "lint": "eslint --ext js,jsx frontend app/assets config",
-    "lint-styles": "stylelint 'frontend/**/*' 'app/assets/**/*'",
-    "test": "BABEL_ENV=test NODE_ENV=test jest frontend"
+    "lint-styles": "stylelint 'frontend/**/*' 'app/assets/**/*'"
   },
   "dependencies": {
     "@babel/core": "^7.12.3",
@@ -16,6 +15,7 @@
     "@babel/plugin-proposal-decorators": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "@rails/actioncable": "^6.0.3",
     "@rails/activestorage": "^6.0.3",
     "@rails/webpacker": "^5.2.1",
@@ -23,6 +23,7 @@
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.5",
     "cssnano": "^4.1.10",
+    "lodash": "^4.17.20",
     "postcss-color-function": "^4.1.0",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-import": "^12.0.1",

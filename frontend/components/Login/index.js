@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import useForm from "root/hooks/useForm";
 import { useAuth } from "root/hooks/useAuth";
 
-import styles from "./index.module.css";
+import "./index.css";
 
 export default function Login() {
   const { formValues, handleChange } = useForm();
@@ -27,7 +27,7 @@ export default function Login() {
   }
 
   return (
-    <div className={styles.root}>
+    <div className="root">
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">
           Emails
