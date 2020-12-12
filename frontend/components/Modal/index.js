@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { createFood } from "root/api/foods";
+import { createFood, deleteFood } from "root/api/foods";
 
 import "./index.css";
 
@@ -13,7 +13,10 @@ const Modal = ({ onClose, data }) => {
   );
   const [protein, setProtein] = useState(data ? data.protein : null);
 
-  const handleRemove = () => {};
+  const handleRemove = () => {
+    deleteFood(data.id);
+    onClose(true);
+  };
 
   const handleCreate = () => {
     createFood({

@@ -1,13 +1,19 @@
-import redaxios from "redaxios";
+import axios from "axios";
 
 export async function getFood() {
-  const response = await redaxios.get("/foods");
+  const response = await axios.get("/foods");
 
   return response.data;
 }
 
 export async function createFood(data) {
-  const response = await redaxios.post("/foods", data);
+  const response = await axios.post("/foods", data);
+
+  return response;
+}
+
+export async function deleteFood(id) {
+  const response = await axios.delete(`/foods/${id}`);
 
   return response;
 }

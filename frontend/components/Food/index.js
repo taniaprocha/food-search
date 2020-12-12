@@ -21,6 +21,7 @@ const Food = ({ data, onUpdate }) => {
 
   const handleCloseModal = (updateFood) => {
     setIsOpen(false);
+
     if (updateFood) {
       onUpdate();
     }

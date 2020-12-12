@@ -1,19 +1,19 @@
-import redaxios from "redaxios";
+import axios from "axios";
 
 export async function getSession() {
-  const response = await redaxios.get("/session");
+  const response = await axios.get("/session");
 
   return response;
 }
 
 export async function login(email, password) {
-  const response = await redaxios.post("/session", { email, password });
+  const response = await axios.post("/session", { email, password });
 
   return response;
 }
 
 export async function logout() {
-  const response = await redaxios.delete("/session");
+  const response = await axios.delete("/session");
 
   return response;
 }

@@ -8,8 +8,15 @@ class FoodsController < ApplicationController
   def create
     food = Food.new(food_params)
     food.save
+  end
 
-    render json: food, status: :created
+  def destroy
+    Food.find(params[:id]).destroy
+  end
+
+  def update
+    food = Food.find(params[:id])
+    food.update_attributes(food_params)
   end
 
   private
