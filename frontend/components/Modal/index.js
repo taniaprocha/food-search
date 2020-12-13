@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { createFood, deleteFood } from "root/api/foods";
+import { createFood, deleteFood, updateFood } from "root/api/foods";
 
 import "./index.css";
+import { update } from "lodash";
 
 const Modal = ({ onClose, data }) => {
   const [name, setName] = useState(data ? data.name : null);
@@ -13,13 +14,34 @@ const Modal = ({ onClose, data }) => {
   );
   const [protein, setProtein] = useState(data ? data.protein : null);
 
-  const handleRemove = () => {
-    deleteFood(data.id);
+  const handleRemove = async () => {
+    await deleteFood(data.id);
     onClose(true);
   };
 
-  const handleCreate = () => {
-    createFood({
+  const handleCreate = async () => {
+    const newInfo = {};
+    if (name !== data.name) {
+      newInfo.name = name;
+    }
+    if (energy !== data.energy) {
+      newInfo.energy = energy;
+    }
+    if (fat !== data.fat) {
+      newInfo.fat = fat;
+    }
+    if (carbohydrates !== data.carbohydrates) {
+      newInfo.carbohydrates = carbohydrates;
+    }
+    if (protein !== data.protein) {
+      newInfo.protein = protein;
+    }
+    await createFood(newInfo);
+    onClose(true);
+  };
+
+  const handleSave = async () => {
+    await updateFood(data.id, {
       name,
       energy,
       fat,
@@ -28,8 +50,6 @@ const Modal = ({ onClose, data }) => {
     });
     onClose(true);
   };
-
-  const handleSave = () => {};
 
   const handleChangeName = (event) => {
     setName(event.target.value);
@@ -49,6 +69,36 @@ const Modal = ({ onClose, data }) => {
 
   const handleChangeProtein = (event) => {
     setProtein(event.target.value);
+  };
+
+  const renderCreateOrUpdate = () => {
+    if (data) {
+      return (
+        <button
+          disabled={
+            name === data.name &&
+            energy === data.energy &&
+            fat === data.fat &&
+            protein === data.protein &&
+            carbohydrates === data.carbohydrates
+          }
+          onClick={handleSave}
+        >
+          Gravar e fechar
+        </button>
+      );
+    }
+
+    return (
+      <button
+        disabled={
+          !name || energy < 0 || fat < 0 || protein < 0 || carbohydrates < 0
+        }
+        onClick={handleCreate}
+      >
+        Criar e fechar
+      </button>
+    );
   };
 
   return (
@@ -113,34 +163,7 @@ const Modal = ({ onClose, data }) => {
         <div className="buttons">
           {data && <button onClick={handleRemove}>Eliminar</button>}
           <button onClick={onClose}>Cancelar</button>
-          {!data ? (
-            <button
-              disabled={
-                !name ||
-                energy < 0 ||
-                fat < 0 ||
-                protein < 0 ||
-                carbohydrates < 0
-              }
-              onClick={handleCreate}
-            >
-              Criar e fechar
-            </button>
-          ) : null}
-          {data ? (
-            <button
-              disabled={
-                !name ||
-                energy < 0 ||
-                fat < 0 ||
-                protein < 0 ||
-                carbohydrates < 0
-              }
-              onClick={handleSave}
-            >
-              Gravar e fechar
-            </button>
-          ) : null}
+          {renderCreateOrUpdate()}
         </div>
       </div>
     </div>

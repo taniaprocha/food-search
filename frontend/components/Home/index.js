@@ -24,22 +24,18 @@ export default function Home() {
 
   return (
     <div className="root">
-      <div>Wow, an Async Component</div>
-
-      {user && <div>Hello {user.name}!</div>}
-
       <Food onUpdate={getAllFood} data={food}></Food>
 
       <div className="links">
         {user && user.role === "admin" && <a href="/admin">Admin Area</a>}
 
-        {user ? (
+        {/* user ? (
           <button type="button" onClick={handleLogout}>
             Logout
           </button>
         ) : (
           <Link to="/login">Login</Link>
-        )}
+        ) */}
       </div>
     </div>
   );

@@ -32,7 +32,9 @@ const Food = ({ data, onUpdate }) => {
   }
 
   return (
-    <div>
+    <div className="food-container">
+      <div>Alimentos</div>
+      <div>Pesquise, </div>
       {isOpen ? (
         <Modal
           data={selectedId && find(data, ["id", selectedId])}

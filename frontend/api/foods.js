@@ -17,3 +17,9 @@ export async function deleteFood(id) {
 
   return response;
 }
+
+export async function updateFood(id, data) {
+  const response = await axios.patch(`/foods/${id}`, data);
+
+  return response;
+}

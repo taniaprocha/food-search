@@ -1,5 +1,11 @@
 .root {
-  margin: 1rem;
+  padding: 20px;
+
+  background-color: grey;
+}
+
+.links {
+  display: none;
 }
 
 .links > * + * {
