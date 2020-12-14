@@ -31,6 +31,3 @@ spec/examples.txt
 yarn-debug.log*
 .yarn-integrity
 .env
-
-# docker compose stuff
-docker-db

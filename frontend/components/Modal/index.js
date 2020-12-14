@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { createFood, deleteFood, updateFood } from "root/api/foods";
 
-import "./index.css";
 import { update } from "lodash";
+
+import styles from "./index.module.css";
 
 const Modal = ({ onClose, data }) => {
   const [name, setName] = useState(data ? data.name : null);
@@ -102,12 +103,12 @@ const Modal = ({ onClose, data }) => {
   };
 
   return (
-    <div className="modal">
-      <button className="close" onClick={onClose} type="button"></button>
+    <div className={styles.root}>
+      <button className={styles.close} onClick={onClose} type="button"></button>
 
-      <div className="container">
-        <div className="title">Informações do alimento</div>
-        <div className="subtitle">
+      <div className={styles.container}>
+        <div className={styles.title}>Informações do alimento</div>
+        <div className={styles.subtitle}>
           Consulte e altere as informações do alimento
         </div>
         <div>
@@ -160,7 +161,7 @@ const Modal = ({ onClose, data }) => {
             </div>
           </div>
         </div>
-        <div className="buttons">
+        <div className={styles.button}>
           {data && <button onClick={handleRemove}>Eliminar</button>}
           <button onClick={onClose}>Cancelar</button>
           {renderCreateOrUpdate()}

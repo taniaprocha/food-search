@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "root/components/Modal";
 import find from "lodash/find";
-
-import "./index.css";
+import List from "./List";
+import styles from "./index.module.css";
 
 const Food = ({ data, onUpdate }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,30 +32,16 @@ const Food = ({ data, onUpdate }) => {
   }
 
   return (
-    <div className="food-container">
-      <div>Alimentos</div>
-      <div>Pesquise, </div>
+    <div className={styles.root}>
       {isOpen ? (
         <Modal
           data={selectedId && find(data, ["id", selectedId])}
           onClose={handleCloseModal}
         />
       ) : null}
-      <div className="food-list">
-        {data.map(({ id, name, energy, fat, carbohydrates, protein }) => {
-          return (
-            <button className="food-item" onClick={handleEdit(id)}>
-              <div>{name}</div>
-              <div>{`${energy}kcal`}</div>
-              <div>{`${fat}g`}</div>
-              <div>{`${carbohydrates}g`}</div>
-              <div>{`${protein}g`}</div>
-            </button>
-          );
-        })}
-      </div>
+      <List data={data} onSelect={handleEdit} />
 
-      <button className="create-button" type="button" onClick={handleCreate}>
+      <button className={styles.create} type="button" onClick={handleCreate}>
         Criar alimento
       </button>
     </div>

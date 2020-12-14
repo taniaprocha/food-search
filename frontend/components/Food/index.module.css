@@ -1,32 +1,42 @@
-.food-container {
-  background-color: white;
-
-  padding: 20px;
-
-  border-radius: 4px;
-
-  width: 800px;
+.root {
 }
 
-.food-list {
-  width: 800px;
+.list {
+  width: 100%;
+  margin-top: 10px;
 }
 
-.food-item {
+.item {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
   margin-top: 8px;
+
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  outline: none;
+
+  .column {
+    width: 15%;
+
+    .columntitle {
+    }
+  }
+
+  .name {
+    width: 60%;
+
+    text-align: left;
+  }
 }
 
-.food-item:hover {
+.item:hover {
   border: 1px solid green;
 }
 
-.create-button {
+.create {
+  width: 300px;
   margin-top: 30px;
 }
