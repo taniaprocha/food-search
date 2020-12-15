@@ -26,13 +26,7 @@ export default function Home() {
 
   async function handleFilter(search, order) {
     let response;
-    if (search && order) {
-      response = await searchAndOrder(search, order);
-    } else if (order) {
-      response = await orderResults(order);
-    } else {
-      response = await searchResults(search);
-    }
+    response = await searchAndOrder(search, order);
     console.log(response);
     setFood(response);
   }

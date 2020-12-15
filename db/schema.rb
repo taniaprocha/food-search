@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_12_11_200244) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name", null: false
+    t.string "parameterized_name", null: false
     t.integer "energy", null: false
     t.decimal "fat", null: false
     t.decimal "carbohydrates", null: false

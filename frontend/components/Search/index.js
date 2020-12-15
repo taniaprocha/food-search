@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import deburr from "lodash/deburr";
 
 import styles from "./index.module.css";
 
@@ -8,8 +9,10 @@ const Search = ({ onFilter }) => {
   const [order, setOrder] = useState();
 
   const handleChange = (event) => {
-    setSearch(event.target.value);
-    onFilter(event.target.value, order);
+    const value = deburr(event.target.value);
+    console.log(value);
+    setSearch(value);
+    onFilter(value.toLowerCase(), order);
   };
 
   const handleListChange = (event) => {

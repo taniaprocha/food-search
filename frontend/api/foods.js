@@ -25,7 +25,8 @@ export async function updateFood(id, data) {
 }
 
 export async function searchAndOrder(search, order) {
-  const response = await axios.get(`/foods?name=${search}&order=${order}`);
+  console.log(search, order);
+  const response = await axios.get(`/foods?search=${search}&order=${order}`);
   return response.data;
 }
 
@@ -35,6 +36,6 @@ export async function orderResults(order) {
 }
 
 export async function searchResults(search) {
-  const response = await axios.get(`/foods?name=${search}`);
+  const response = await axios.get(`/foods?search=${search}`);
   return response.data;
 }

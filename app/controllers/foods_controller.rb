@@ -2,28 +2,15 @@
 
 class FoodsController < ApplicationController
   def index
-    order = params[:order]
-    search = params[:name]
+    search = params[:search]  
 
-    if search.nil?
-      results = Food.where("name like ?", "%#{search}%")
-    else
+    if search.blank?
       results = Food.all
-    end
-
-    if order === 'energy'
-      ordered_results = results.order(energy: :asc)      
-    elsif order === 'fat'
-      ordered_results = results.order(fat: :asc) 
-    elsif order === 'carbohydrates'
-      ordered_results = results.order(carbohydrates: :asc) 
-    elsif order === 'protein'
-      ordered_results = results.order(protein: :asc)     
     else
-      ordered_results = results
+      results = Food.where("parameterized_name like ?", "%#{search}%")
     end
 
-    render json: ordered_results
+    render json: ordered_results(results, params[:order])
   end
 
   def create
@@ -41,6 +28,22 @@ class FoodsController < ApplicationController
   end
 
   private
+
+  def ordered_results(results, order)
+    if order === 'energy'
+      ordered_results = results.order(energy: :asc)      
+    elsif order === 'fat'
+      ordered_results = results.order(fat: :asc) 
+    elsif order === 'carbohydrates'
+      ordered_results = results.order(carbohydrates: :asc) 
+    elsif order === 'protein'
+      ordered_results = results.order(protein: :asc)     
+    else
+      ordered_results = results
+    end
+
+    return ordered_results
+  end
 
   def food_params
     params.require(:food).permit(:name, :energy, :fat, :carbohydrates, :protein)

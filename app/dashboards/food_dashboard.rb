@@ -12,6 +12,7 @@ class FoodDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
+    parameterized_name: Field::String,
     energy: Field::Number,
     fat: Field::Number,
     carbohydrates: Field::Number,
@@ -28,6 +29,7 @@ class FoodDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
+    parameterized_name
     energy
     fat
     carbohydrates
@@ -39,6 +41,7 @@ class FoodDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    parameterized_name
     energy
     fat
     carbohydrates
@@ -51,6 +54,7 @@ class FoodDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     id
     name
+    parameterized_name
     energy
     fat
     carbohydrates
