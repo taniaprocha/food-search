@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { createFood, deleteFood, updateFood } from "root/api/foods";
-
-import { update } from "lodash";
+import Typography from "root/components/Typography";
 
 import styles from "./index.module.css";
 
@@ -107,10 +106,12 @@ const Modal = ({ onClose, data }) => {
       <button className={styles.close} onClick={onClose} type="button"></button>
 
       <div className={styles.container}>
-        <div className={styles.title}>Informações do alimento</div>
-        <div className={styles.subtitle}>
+        <Typography variant="h1" className={styles.title}>
+          Informações do alimento
+        </Typography>
+        <Typography variant="h4" className={styles.subtitle}>
           Consulte e altere as informações do alimento
-        </div>
+        </Typography>
         <div>
           <div>
             Nome:{" "}
@@ -121,7 +122,9 @@ const Modal = ({ onClose, data }) => {
           </div>
         </div>
         <div>
-          <div className="title">Macronutrientes</div>
+          <Typography variant="h2" className="title">
+            Macronutrientes
+          </Typography>
           <div className="grid">
             <div className="energy">
               Energia:{" "}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "root/components/Modal";
+import Typography from "root/components/Typography";
 import find from "lodash/find";
 import List from "./List";
 import styles from "./index.module.css";
@@ -42,7 +43,7 @@ const Food = ({ data, onUpdate }) => {
       <List data={data} onSelect={handleEdit} />
 
       <button className={styles.create} type="button" onClick={handleCreate}>
-        Criar alimento
+        <Typography>Criar alimento</Typography>
       </button>
     </div>
   );

@@ -19194,3 +19194,443 @@ Processing by FoodsController#index as */*
 Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 1.5ms | Allocations: 5420)
 
 
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:38:00 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (2.2ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:38:00.964673"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 2.5ms | ActiveRecord: 3.4ms | Allocations: 5203)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:38:02 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:38:02.859923"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 5019)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:38:13 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:38:13.849883"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.1ms | Allocations: 5005)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:38:53 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.2ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:38:53.601385"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.6ms | Allocations: 4999)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:41:57 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:41:57.746973"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 4997)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:41:58 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:41:58.659272"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.1ms | Allocations: 4997)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:42:14 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:42:14.940139"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 1.0ms | Allocations: 5005)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:43:54 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:43:54.585710"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 1.0ms | Allocations: 5020)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:44:18 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.2ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:44:18.593096"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 1.6ms | Allocations: 5005)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:44:38 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:44:38.594893"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 1.0ms | Allocations: 4995)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:46:25 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:46:25.586449"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 5001)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:46:33 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:46:33.839854"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 4993)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:46:52 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.1ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:46:52.792640"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 4999)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:47:12 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:12.581597"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.9ms | Allocations: 5013)
+
+
+Started GET "/foods?search=c&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:26 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"c", "order"=>"undefined"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%c%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:26.551847"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 4432)
+
+
+Started GET "/foods?search=ce&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:26 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"ce", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%ce%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:26.573758"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 3736)
+
+
+Started GET "/foods?search=cen&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:26 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"cen", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%cen%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:26.687522"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 3726)
+
+
+Started GET "/foods?search=cena&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:26 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"cena", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%cena%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:26.829578"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.5ms | Allocations: 3553)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:47:33 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:33.939315"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 1.5ms | Allocations: 5007)
+
+
+Started GET "/foods?search=cen&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:35 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"cen", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%cen%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:35.784522"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.4ms | Allocations: 3734)
+
+
+Started GET "/foods?search=cena&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:35 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"cena", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%cena%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.2ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:35.909778"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 1.6ms | Allocations: 3567)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:47:47 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:47.677731"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 1.4ms | Allocations: 5011)
+
+
+Started GET "/foods?search=n&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:59 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"n", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%n%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:59.158792"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.3ms | Allocations: 4226)
+
+
+Started GET "/foods?search=na&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:59 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"na", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%na%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:59.236881"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 3730)
+
+
+Started GET "/foods?search=nat&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:59 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"nat", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%nat%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.2ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:59.420941"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.5ms | Allocations: 3732)
+
+
+Started GET "/foods?search=natu&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:59 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"natu", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%natu%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:59.556992"], ["id", 1]]
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.4ms | Allocations: 3744)
+
+
+Started GET "/foods?search=natur&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:59 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"natur", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%natur%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:59.643429"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 3726)
+
+
+Started GET "/foods?search=natura&order=undefined" for 127.0.0.1 at 2020-12-15 16:47:59 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"natura", "order"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%natura%')[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:47:59.725081"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.9ms | Allocations: 3730)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:48:56 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:48:56.834572"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 1.3ms | Allocations: 4995)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 16:57:30 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:57:30.381697"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 1.5ms | Allocations: 3543)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 16:57:37 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:57:37.418979"], ["id", 1]]
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 3402)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-15 16:58:25 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 187)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:58:25.903850"], ["id", 1]]
+Completed 200 OK in 49ms (Views: 9.9ms | ActiveRecord: 6.3ms | Allocations: 16927)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:58:26 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:58:26.493755"], ["id", 1]]
+Completed 200 OK in 21ms (Views: 9.9ms | ActiveRecord: 4.0ms | Allocations: 10015)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 16:59:47 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:59:47.854162"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 2.1ms | Allocations: 3397)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 16:59:48 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 16:59:48.498871"], ["id", 1]]
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 1.8ms | Allocations: 4999)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:02:04 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:02:04.601026"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 5038)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:02:09 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:02:09.523574"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 1.1ms | Allocations: 5018)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 17:03:37 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  [1m[36mUser Update All (1.4ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:03:37.047227"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.6ms | Allocations: 3416)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 17:03:50 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:03:50.695920"], ["id", 1]]
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 3400)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:03:51 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (6.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:03:51.306031"], ["id", 1]]
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 7.2ms | Allocations: 5018)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:04:22 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:04:22.469227"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 1.0ms | Allocations: 4997)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:04:29 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:04:29.582701"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 5001)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:06:05 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:06:05.773021"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 5036)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:07:26 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:07:26.862429"], ["id", 1]]
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 2.3ms | Allocations: 5013)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:10:14 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.0ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:10:14.464538"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 1.4ms | Allocations: 5005)
+
+
+Started GET "/foods" for 127.0.0.1 at 2020-12-15 17:12:37 +0000
+Processing by FoodsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:13:in `index'
+  [1m[36mUser Update All (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-15 17:12:37.625061"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 2.0ms | Allocations: 4999)
+
+

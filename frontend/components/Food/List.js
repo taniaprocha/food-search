@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Typography from "root/components/Typography";
 
 import styles from "./index.module.css";
 
@@ -13,22 +14,24 @@ const List = ({ data, onSelect }) => {
       {data.map(({ id, name, energy, fat, carbohydrates, protein }) => {
         return (
           <button key={id} className={styles.item} onClick={onSelect(id)}>
-            <div className={styles.name}>{name}</div>
-            <div className={styles.column}>
-              <div>{`${energy}kcal`}</div>
-              <div className={styles.columntitle}>Energia</div>
+            <div className={styles.name}>
+              <Typography variant="h5">{name}</Typography>
             </div>
             <div className={styles.column}>
-              <div>{`${fat}g`}</div>
-              <div className={styles.columntitle}>Gordura</div>
+              <Typography variant="h5">{`${energy}kcal`}</Typography>
+              <Typography className={styles.columntitle}>Energia</Typography>
             </div>
             <div className={styles.column}>
-              <div>{`${carbohydrates}g`}</div>
-              <div className={styles.columntitle}>H. Carbono</div>
+              <Typography variant="h5">{`${fat}g`}</Typography>
+              <Typography className={styles.columntitle}>Gordura</Typography>
             </div>
             <div className={styles.column}>
-              <div>{`${protein}g`}</div>
-              <div className={styles.columntitle}>Proteína</div>
+              <Typography variant="h5">{`${carbohydrates}g`}</Typography>
+              <Typography className={styles.columntitle}>H. Carbono</Typography>
+            </div>
+            <div className={styles.column}>
+              <Typography variant="h5">{`${protein}g`}</Typography>
+              <Typography className={styles.columntitle}>Proteína</Typography>
             </div>
           </button>
         );

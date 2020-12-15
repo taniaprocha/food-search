@@ -1,7 +1,7 @@
 .root {
   padding: 20px;
 
-  background-color: grey;
+  background-color: #c2c2c2;
 }
 
 .container {
@@ -10,13 +10,4 @@
   background-color: white;
 
   border-radius: 4px;
-}
-
-.links {
-  display: none;
-}
-
-.links > * + * {
-  margin-top: 100px;
-  margin-left: 1rem;
 }
