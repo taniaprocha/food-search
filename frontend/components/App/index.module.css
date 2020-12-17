@@ -16,3 +16,7 @@
   background-color: white;
   border-radius: $spacing-4;
 }
+
+.empty {
+  margin-top: $spacing-20;
+}

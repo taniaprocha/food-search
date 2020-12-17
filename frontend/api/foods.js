@@ -2,7 +2,6 @@ import axios from "axios";
 
 export async function getFood(page) {
   const response = await axios.get(`/foods?page=${page}`);
-  console.log("get ", response.data);
   return {
     data: response.data[1],
     page: response.data[0].page,
@@ -32,7 +31,6 @@ export async function searchAndOrder(search, order, page) {
   const response = await axios.get(
     `/foods?search=${search}&order=${order}&page=${page}`
   );
-  console.log("search and order ", response.data);
 
   return {
     data: response.data[1],

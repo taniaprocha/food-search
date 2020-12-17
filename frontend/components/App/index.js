@@ -11,8 +11,8 @@ const App = () => {
   const [food, setFood] = useState();
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
-  const [search, setSearch] = useState(null);
-  const [order, setOrder] = useState(null);
+  const [search, setSearch] = useState();
+  const [order, setOrder] = useState();
 
   async function getAllFood() {
     const response = await getFood(page);
@@ -56,11 +56,19 @@ const App = () => {
 
   const renderFood = () => {
     if (!food) {
-      return <Typography>Loading</Typography>;
+      return (
+        <div className={styles.empty}>
+          <Typography>Loading</Typography>
+        </div>
+      );
     }
 
     if (isEmpty(food)) {
-      return <Typography>Não existem alimentos para a pesquisa.</Typography>;
+      return (
+        <div className={styles.empty}>
+          <Typography>Não existem alimentos para a pesquisa.</Typography>
+        </div>
+      );
     }
 
     return (
