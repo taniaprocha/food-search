@@ -84,8 +84,8 @@ const Modal = ({ onClose, data }) => {
       );
     }
 
-    isDisabled =
-      !name || energy < 0 || fat < 0 || protein < 0 || carbohydrates < 0;
+    isDisabled = !name || !energy || !fat || !protein || !carbohydrates;
+
     return (
       <button
         disabled={isDisabled}

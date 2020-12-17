@@ -1,9 +1,9 @@
 # Food Search
 
-Postgres as a database, Rails as our backend framework with a React SPA at the front.
-
-It includes some sane defaults, including a heavily customized Webpack config, user authentication using Sorcery, testing using Rspec and an Administrate engine to manage Users and other backend models.
-
+Food search display a list of food. You can type a name to search a food, order the food list by micronutrient, and create new ones.
+Clicking in a food will open a modal with the food info. You can edit the information or delete the food.
+I used a rails-starter (https://github.com/aurora-digital/rails-starter) to start the project.
+The project
 
 ## Requisites
 
@@ -12,14 +12,15 @@ To run this project you will need the following tools and runtimes:
 - Ruby 2.7.2
 - Node 12.\*
 - Postgres 10 and greater
-- Chromedriver
 
-Our `bin/setup` script will handle installing Ruby and Node if you have [asdf-vm](https://github.com/asdf-vm/asdf) properly installed.
+Use [asdf-vm](https://github.com/asdf-vm/asdf) to handle with Ruby and Node instalation.
 
 # Developing
 
-Run `bin/setup` to get everything up and running. Then `bin/server` to start hammering away at it.
+Run `bin/setup` to get everything up and running.
+Then `bin/server` to start hammering away at it.
+Next `rake db:seed` to populate initial BD.
 
-Also don't forget to setup the default admin user with `rake populate:admin_user`. The default credentials are `admin@mail.com`, the password being `foobar`.
+# Live
 
-Populate Db with `rake db:seed`
+https://foo-search.herokuapp.com/
