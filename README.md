@@ -19,7 +19,9 @@ Use [asdf-vm](https://github.com/asdf-vm/asdf) to handle with Ruby and Node inst
 # Developing
 
 Run `bin/setup` to get everything up and running.
+
 Then `bin/server` to start hammering away at it.
+
 Next `rake db:seed` to populate initial BD.
 
 # Live
