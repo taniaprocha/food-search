@@ -1,13 +1,18 @@
+@import "../../styles/all.css";
+
 .root {
-  padding: 20px;
+  height: calc(100% - $spacing-40);
+  padding: $spacing-20;
 
   background-color: #c2c2c2;
 }
 
 .container {
-  padding: 20px 20px 60px 20px;
+  position: relative;
+
+  height: calc(100% - $spacing-20 - $spacing-56);
+  padding: $spacing-20 $spacing-20 $spacing-56 $spacing-20;
 
   background-color: white;
-
-  border-radius: 4px;
+  border-radius: $spacing-4;
 }

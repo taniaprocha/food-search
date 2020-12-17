@@ -1,15 +1,35 @@
 {
-  "application.js": "/packs/application-b74fa7f9ca5e3b34e7ff.js",
-  "application.js.map": "/packs/js/application-3e67e0505e1827f76cf4.hot-update.js.map",
+  "application.js": "/packs/application-805341c336ba60a6d782.js",
+  "application.js.map": "/packs/js/application-3804877e50b648ec6ad2.hot-update.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/application-b74fa7f9ca5e3b34e7ff.js"
+        "/packs/application-805341c336ba60a6d782.js"
       ],
       "js.map": [
-        "/packs/application-b74fa7f9ca5e3b34e7ff.js.map",
-        "/packs/js/application-3e67e0505e1827f76cf4.hot-update.js.map"
+        "/packs/application-805341c336ba60a6d782.js.map",
+        "/packs/js/application-3804877e50b648ec6ad2.hot-update.js.map"
       ]
     }
-  }
+  },
+  "media/iconfont/MaterialIcons-Regular.eot": "/packs/media/iconfont/MaterialIcons-Regular-57edf9e8.eot",
+  "media/iconfont/MaterialIcons-Regular.ttf": "/packs/media/iconfont/MaterialIcons-Regular-0ead185f.ttf",
+  "media/iconfont/MaterialIcons-Regular.woff": "/packs/media/iconfont/MaterialIcons-Regular-3a3e0eb8.woff",
+  "media/iconfont/MaterialIcons-Regular.woff2": "/packs/media/iconfont/MaterialIcons-Regular-3ca2d0e0.woff2",
+  "media/iconfont/MaterialIconsOutlined-Regular.eot": "/packs/media/iconfont/MaterialIconsOutlined-Regular-0ff1fa31.eot",
+  "media/iconfont/MaterialIconsOutlined-Regular.otf": "/packs/media/iconfont/MaterialIconsOutlined-Regular-82e27ca0.otf",
+  "media/iconfont/MaterialIconsOutlined-Regular.woff": "/packs/media/iconfont/MaterialIconsOutlined-Regular-d8511614.woff",
+  "media/iconfont/MaterialIconsOutlined-Regular.woff2": "/packs/media/iconfont/MaterialIconsOutlined-Regular-e612fbda.woff2",
+  "media/iconfont/MaterialIconsRound-Regular.eot": "/packs/media/iconfont/MaterialIconsRound-Regular-d04621e4.eot",
+  "media/iconfont/MaterialIconsRound-Regular.otf": "/packs/media/iconfont/MaterialIconsRound-Regular-0c2b1361.otf",
+  "media/iconfont/MaterialIconsRound-Regular.woff": "/packs/media/iconfont/MaterialIconsRound-Regular-810b58fd.woff",
+  "media/iconfont/MaterialIconsRound-Regular.woff2": "/packs/media/iconfont/MaterialIconsRound-Regular-32dc68cd.woff2",
+  "media/iconfont/MaterialIconsSharp-Regular.eot": "/packs/media/iconfont/MaterialIconsSharp-Regular-1630f8b9.eot",
+  "media/iconfont/MaterialIconsSharp-Regular.otf": "/packs/media/iconfont/MaterialIconsSharp-Regular-dc881de1.otf",
+  "media/iconfont/MaterialIconsSharp-Regular.woff": "/packs/media/iconfont/MaterialIconsSharp-Regular-f0569a79.woff",
+  "media/iconfont/MaterialIconsSharp-Regular.woff2": "/packs/media/iconfont/MaterialIconsSharp-Regular-e8746dd5.woff2",
+  "media/iconfont/MaterialIconsTwoTone-Regular.eot": "/packs/media/iconfont/MaterialIconsTwoTone-Regular-479a45f3.eot",
+  "media/iconfont/MaterialIconsTwoTone-Regular.otf": "/packs/media/iconfont/MaterialIconsTwoTone-Regular-a9ceacba.otf",
+  "media/iconfont/MaterialIconsTwoTone-Regular.woff": "/packs/media/iconfont/MaterialIconsTwoTone-Regular-a28aa23b.woff",
+  "media/iconfont/MaterialIconsTwoTone-Regular.woff2": "/packs/media/iconfont/MaterialIconsTwoTone-Regular-1609c018.woff2"
 }

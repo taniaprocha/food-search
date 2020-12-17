@@ -45,5 +45,29 @@
 }
 
 .grey {
-  color: grey;
+  color: $grey;
+}
+
+.dark-grey {
+  color: $dark-grey;
+}
+
+.grey-middle-dark {
+  color: $grey-middle-dark;
+}
+
+.regular {
+  font-weight: $font-weight-regular;
+}
+
+.light {
+  font-weight: $font-weight-light;
+}
+
+.thin {
+  font-weight: $font-weight-thin;
+}
+
+.medium {
+  font-weight: $font-weight-medium;
 }

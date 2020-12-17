@@ -15,23 +15,54 @@ const List = ({ data, onSelect }) => {
         return (
           <button key={id} className={styles.item} onClick={onSelect(id)}>
             <div className={styles.name}>
-              <Typography variant="h5">{name}</Typography>
+              <Typography color="grey" variant="body">
+                {name}
+              </Typography>
             </div>
             <div className={styles.column}>
-              <Typography variant="h5">{`${energy}kcal`}</Typography>
-              <Typography className={styles.columntitle}>Energia</Typography>
+              <Typography
+                variant="body"
+                color="grey"
+              >{`${energy} kcal`}</Typography>
+              <Typography
+                color="grey-middle-dark"
+                className={styles.columntitle}
+              >
+                Energia
+              </Typography>
             </div>
             <div className={styles.column}>
-              <Typography variant="h5">{`${fat}g`}</Typography>
-              <Typography className={styles.columntitle}>Gordura</Typography>
+              <Typography variant="body" color="grey">{`${fat} g`}</Typography>
+              <Typography
+                color="grey-middle-dark"
+                className={styles.columntitle}
+              >
+                Gordura
+              </Typography>
             </div>
             <div className={styles.column}>
-              <Typography variant="h5">{`${carbohydrates}g`}</Typography>
-              <Typography className={styles.columntitle}>H. Carbono</Typography>
+              <Typography
+                variant="body"
+                color="grey"
+              >{`${carbohydrates} g`}</Typography>
+              <Typography
+                color="grey-middle-dark"
+                className={styles.columntitle}
+              >
+                H. Carbono
+              </Typography>
             </div>
             <div className={styles.column}>
-              <Typography variant="h5">{`${protein}g`}</Typography>
-              <Typography className={styles.columntitle}>Proteína</Typography>
+              <Typography
+                variant="body"
+                color="grey"
+              >{`${protein} g`}</Typography>
+              <Typography
+                color="grey-middle-dark"
+                className={styles.columntitle}
+              >
+                Proteína
+              </Typography>
             </div>
           </button>
         );

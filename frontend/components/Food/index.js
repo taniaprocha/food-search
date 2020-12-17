@@ -6,6 +6,8 @@ import find from "lodash/find";
 import List from "./List";
 import styles from "./index.module.css";
 
+import "material-icons/iconfont/material-icons.css";
+
 const Food = ({ data, onUpdate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedId, setSelectedId] = useState();
@@ -43,7 +45,8 @@ const Food = ({ data, onUpdate }) => {
       <List data={data} onSelect={handleEdit} />
 
       <button className={styles.create} type="button" onClick={handleCreate}>
-        <Typography>Criar alimento</Typography>
+        <span className="material-icons">add_circle_outline</span>
+        <Typography variant="h5">Criar alimento</Typography>
       </button>
     </div>
   );

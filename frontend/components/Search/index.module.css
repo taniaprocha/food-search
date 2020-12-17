@@ -1,5 +1,7 @@
+@import "../../styles/all.css";
+
 .root {
-  margin-top: 20px;
+  margin-top: $spacing-20;
 
   form {
     display: flex;
@@ -7,19 +9,28 @@
 
     .search {
       width: 70%;
-      padding: 8px;
+      padding: $spacing-8;
 
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: $border-width solid rgba(0, 0, 0, 0.1);
+      @include h5-font;
+      color: $grey;
+
       outline: none;
     }
 
     .order {
       width: 30%;
-      padding: 8px;
-      margin-left: 8px;
+      padding: $spacing-8;
+      margin-left: $spacing-8;
 
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: $border-width solid rgba(0, 0, 0, 0.1);
+      color: $grey;
       outline: none;
+
+      option {
+        @include h4-font;
+        color: $grey;
+      }
     }
   }
 }

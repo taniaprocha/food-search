@@ -1,0 +1,23 @@
+@import "../../styles/all.css";
+
+.root {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: $spacing-20;
+}
+
+.page {
+  padding: $spacing-4 $spacing-8;
+
+  background-color: white;
+  border: $border-width solid $light-grey;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.page:hover,
+.selected {
+  background-color: $grey-middle-dark;
+}

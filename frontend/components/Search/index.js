@@ -1,22 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import deburr from "lodash/deburr";
+import Typography from "root/components/Typography";
 
 import styles from "./index.module.css";
 
-const Search = ({ onFilter }) => {
-  const [search, setSearch] = useState();
-  const [order, setOrder] = useState();
-
+const Search = ({ onFilter, order, search }) => {
   const handleChange = (event) => {
-    const value = deburr(event.target.value);
-    console.log(value);
-    setSearch(value);
-    onFilter(value.toLowerCase(), order);
+    onFilter(deburr(event.target.value), order);
   };
 
   const handleListChange = (event) => {
-    setOrder(event.target.value);
     onFilter(search, event.target.value);
   };
 
@@ -30,7 +24,12 @@ const Search = ({ onFilter }) => {
           placeholder="Pesquisar alimento"
         />
 
-        <select onChange={handleListChange} name="cars" id="cars">
+        <select
+          className={styles.order}
+          onChange={handleListChange}
+          name="micro"
+          id="micro"
+        >
           <option value="">Ordenar por nutriente</option>
           <option value="energy">Energia</option>
           <option value="fat">Gordura</option>

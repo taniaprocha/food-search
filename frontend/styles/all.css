@@ -1,3 +1,4 @@
-@import "./fonts.css";
 @import "./breakpoints.css";
 @import "./variables.css";
+@import "./layout.css";
+@import "./colors.css";

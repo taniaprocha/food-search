@@ -2,20 +2,17 @@
 
 class FoodsController < ApplicationController
   def index
-    search = params[:search]  
-
-    if search.blank?
-      results = Food.all
+    if params[:search].present?
+      results = Food.where("parameterized_name like ?", "%#{params[:search]}%")
     else
-      results = Food.where("parameterized_name like ?", "%#{search}%")
+      results = Food.all
     end
 
-    render json: ordered_results(results, params[:order])
+    render json: ordered_results(results, params[:order], params[:page])
   end
 
   def create
-    food = Food.new(food_params)
-    food.save
+    Food.create(name: params[:name], parameterized_name: ActiveSupport::Inflector.parameterize(params[:name]), energy: params[:energy], fat: params[:fat], carbohydrates: params[:carbohydrates], :protein => params[:protein])
   end
 
   def destroy
@@ -24,12 +21,12 @@ class FoodsController < ApplicationController
 
   def update
     food = Food.find(params[:id])
-    food.update_attributes(food_params)
+    food.update(food_params)
   end
 
   private
 
-  def ordered_results(results, order)
+  def ordered_results(results, order, page)
     if order === 'energy'
       ordered_results = results.order(energy: :asc)      
     elsif order === 'fat'
@@ -42,7 +39,7 @@ class FoodsController < ApplicationController
       ordered_results = results
     end
 
-    return ordered_results
+    return pagy(ordered_results, page: page, items: 5)
   end
 
   def food_params

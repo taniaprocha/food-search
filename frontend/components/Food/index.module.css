@@ -1,20 +1,22 @@
+@import "../../styles/all.css";
+
 .root {
 }
 
 .list {
   width: 100%;
-  margin-top: 10px;
+  margin-top: $spacing-12;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 10px;
-  margin-top: 8px;
+  padding: $spacing-8;
+  margin-top: $spacing-8;
 
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: $border-width solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
 
@@ -33,10 +35,31 @@
 }
 
 .item:hover {
-  border: 1px solid green;
+  border: $border-width solid $dark-green;
 }
 
 .create {
-  width: 300px;
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $spacing-8;
+  margin-top: $spacing-28;
+
+  background-color: white;
+  border: $border-width solid rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+  outline: none;
+
+  span {
+    margin-right: $spacing-8;
+
+    color: $grey;
+
+    font-size: $spacing-16;
+  }
+}
+
+.create:hover {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,9 +1,13 @@
 import axios from "axios";
 
-export async function getFood() {
-  const response = await axios.get("/foods");
-
-  return response.data;
+export async function getFood(page) {
+  const response = await axios.get(`/foods?page=${page}`);
+  console.log("get ", response.data);
+  return {
+    data: response.data[1],
+    page: response.data[0].page,
+    total: response.data[0].pages,
+  };
 }
 
 export async function createFood(data) {
@@ -24,18 +28,15 @@ export async function updateFood(id, data) {
   return response;
 }
 
-export async function searchAndOrder(search, order) {
-  console.log(search, order);
-  const response = await axios.get(`/foods?search=${search}&order=${order}`);
-  return response.data;
-}
+export async function searchAndOrder(search, order, page) {
+  const response = await axios.get(
+    `/foods?search=${search}&order=${order}&page=${page}`
+  );
+  console.log("search and order ", response.data);
 
-export async function orderResults(order) {
-  const response = await axios.get(`/foods?order=${order}`);
-  return response.data;
-}
-
-export async function searchResults(search) {
-  const response = await axios.get(`/foods?search=${search}`);
-  return response.data;
+  return {
+    data: response.data[1],
+    page: response.data[0].page,
+    total: response.data[0].pages,
+  };
 }

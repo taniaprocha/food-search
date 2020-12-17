@@ -20,23 +20,13 @@ const Modal = ({ onClose, data }) => {
   };
 
   const handleCreate = async () => {
-    const newInfo = {};
-    if (name !== data.name) {
-      newInfo.name = name;
-    }
-    if (energy !== data.energy) {
-      newInfo.energy = energy;
-    }
-    if (fat !== data.fat) {
-      newInfo.fat = fat;
-    }
-    if (carbohydrates !== data.carbohydrates) {
-      newInfo.carbohydrates = carbohydrates;
-    }
-    if (protein !== data.protein) {
-      newInfo.protein = protein;
-    }
-    await createFood(newInfo);
+    await createFood({
+      name,
+      energy,
+      fat,
+      carbohydrates,
+      protein,
+    });
     onClose(true);
   };
 
@@ -82,9 +72,12 @@ const Modal = ({ onClose, data }) => {
             protein === data.protein &&
             carbohydrates === data.carbohydrates
           }
+          className={styles.save}
           onClick={handleSave}
         >
-          Gravar e fechar
+          <Typography variant="h5" color="white">
+            Gravar e fechar
+          </Typography>
         </button>
       );
     }
@@ -94,80 +87,145 @@ const Modal = ({ onClose, data }) => {
         disabled={
           !name || energy < 0 || fat < 0 || protein < 0 || carbohydrates < 0
         }
+        className={styles.save}
         onClick={handleCreate}
       >
-        Criar e fechar
+        <Typography variant="h5" color="white">
+          Criar e fechar
+        </Typography>
       </button>
     );
   };
 
   return (
     <div className={styles.root}>
-      <button className={styles.close} onClick={onClose} type="button"></button>
+      <div className={styles.whitecontainer}>
+        <div className={styles.closecontainer}>
+          <button className={styles.close} onClick={onClose} type="button">
+            <span className="material-icons">close</span>
+          </button>
+        </div>
 
-      <div className={styles.container}>
-        <Typography variant="h1" className={styles.title}>
-          Informações do alimento
-        </Typography>
-        <Typography variant="h4" className={styles.subtitle}>
-          Consulte e altere as informações do alimento
-        </Typography>
-        <div>
-          <div>
-            Nome:{" "}
-            <input onChange={handleChangeName} type="text" value={name}></input>
+        <div className={styles.container}>
+          <div className={styles.title}>
+            <Typography color="dark-grey" variant="h1">
+              Informações do alimento
+            </Typography>
+          </div>
+          <div className={styles.subtitle}>
+            <Typography color="dark-grey" variant="h4">
+              Consulte e altere as informações do alimento
+            </Typography>
+          </div>
+
+          <div className={styles.valuescontainer}>
+            <div className={styles.value}>
+              <div className={styles.titlevalue}>
+                <Typography variant="h4" color="dark-grey">
+                  Nome
+                </Typography>
+              </div>
+              <input
+                onChange={handleChangeName}
+                type="text"
+                value={name}
+              ></input>
+            </div>
+          </div>
+          <div className={styles.macrotitle}>
+            <Typography weight="light" variant="h2">
+              Macronutrientes
+            </Typography>
           </div>
           <div>
-            Quantidade: <input></input>
+            <div className={styles.grid}>
+              <div className={styles.microvalue}>
+                <div className={styles.titlevalue}>
+                  <Typography variant="h4" color="dark-grey">
+                    Energia
+                  </Typography>
+                </div>
+                <input
+                  onChange={handleChangeEnergy}
+                  type="number"
+                  value={energy}
+                ></input>
+                <div className={styles.unit}>
+                  <Typography variant="h4" color="dark-grey">
+                    kcal
+                  </Typography>
+                </div>
+              </div>
+              <div className={styles.microvalue}>
+                <div className={styles.titlevalue}>
+                  <Typography variant="h4" color="dark-grey">
+                    Gordura
+                  </Typography>
+                </div>
+                <input
+                  onChange={handleChangeFat}
+                  type="number"
+                  value={fat}
+                ></input>
+                <div className={styles.unit}>
+                  <Typography variant="h4" color="dark-grey">
+                    g
+                  </Typography>
+                </div>
+              </div>
+              <div className={styles.microvalue}>
+                <div className={styles.titlevalue}>
+                  <Typography variant="h4" color="dark-grey">
+                    H. Carbono
+                  </Typography>
+                </div>
+                <input
+                  onChange={handleChangeCarbo}
+                  type="number"
+                  value={carbohydrates}
+                ></input>
+                <div className={styles.unit}>
+                  <Typography variant="h4" color="dark-grey">
+                    g
+                  </Typography>
+                </div>
+              </div>
+              <div className={styles.microvalue}>
+                <div className={styles.titlevalue}>
+                  <Typography variant="h4" color="dark-grey">
+                    Proteína
+                  </Typography>
+                </div>
+                <input
+                  onChange={handleChangeProtein}
+                  type="number"
+                  value={protein}
+                ></input>
+                <div className={styles.unit}>
+                  <Typography variant="h4" color="dark-grey">
+                    g
+                  </Typography>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <Typography variant="h2" className="title">
-            Macronutrientes
-          </Typography>
-          <div className="grid">
-            <div className="energy">
-              Energia:{" "}
-              <input
-                onChange={handleChangeEnergy}
-                type="number"
-                value={energy}
-              ></input>{" "}
-              kcal
-            </div>
-            <div className="fat">
-              Gordura:{" "}
-              <input
-                onChange={handleChangeFat}
-                type="number"
-                value={fat}
-              ></input>{" "}
-              g
-            </div>
-            <div className="hcarb">
-              H. Carbono:{" "}
-              <input
-                onChange={handleChangeCarbo}
-                type="number"
-                value={carbohydrates}
-              ></input>{" "}
-              g
-            </div>
-            <div className="protein">
-              Proteína:{" "}
-              <input
-                onChange={handleChangeProtein}
-                type="number"
-                value={protein}
-              ></input>{" "}
-              g
+          <div className={styles.buttons}>
+            {data && (
+              <button className={styles.delete} onClick={handleRemove}>
+                <Typography variant="h5" color="white">
+                  Eliminar
+                </Typography>
+              </button>
+            )}
+            <div>
+              <button className={styles.cancel} onClick={onClose}>
+                <Typography variant="h5" color="dark-grey">
+                  Cancelar
+                </Typography>
+              </button>
+              {renderCreateOrUpdate()}
             </div>
           </div>
-        </div>
-        <div className={styles.button}>
-          {data && <button onClick={handleRemove}>Eliminar</button>}
-          <button onClick={onClose}>Cancelar</button>
-          {renderCreateOrUpdate()}
         </div>
       </div>
     </div>
