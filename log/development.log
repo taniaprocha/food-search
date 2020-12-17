@@ -30073,3 +30073,483 @@ Processing by Admin::UsersController#index as HTML
 Completed 200 OK in 466ms (Views: 426.4ms | ActiveRecord: 2.3ms | Allocations: 43255)
 
 
+Started GET "/" for 127.0.0.1 at 2020-12-17 11:47:23 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  [1m[36mUser Update All (1.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:47:23.024787"], ["id", 1]]
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 2.3ms | Allocations: 3590)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 11:47:23 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+  [1m[36mUser Update All (0.5ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:47:23.633308"], ["id", 1]]
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 3.5ms | Allocations: 5429)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-17 11:49:04 +0000
+
+LoadError - cannot load such file -- /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/config/routes.rb:
+
+Started POST "/__better_errors/53a4606d17652578/variables" for 127.0.0.1 at 2020-12-17 11:49:04 +0000
+Started GET "/" for 127.0.0.1 at 2020-12-17 11:49:42 +0000
+
+LoadError - cannot load such file -- /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/config/routes.rb:
+
+Started POST "/__better_errors/673e99157d008f7e/variables" for 127.0.0.1 at 2020-12-17 11:49:42 +0000
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-12-17 11:51:03 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 187)
+  [1m[36mUser Update All (0.8ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:51:03.441595"], ["id", 1]]
+Completed 200 OK in 48ms (Views: 8.2ms | ActiveRecord: 6.5ms | Allocations: 16966)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-17 11:58:31 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Update All (0.9ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:58:31.111395"], ["id", 1]]
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.6ms | Allocations: 3617)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 11:58:31 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+  [1m[36mUser Update All (0.6ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:58:31.620648"], ["id", 1]]
+Completed 200 OK in 27ms (Views: 12.5ms | ActiveRecord: 7.2ms | Allocations: 10460)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2020-12-17 11:59:53 +0000
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_search.html.erb (Duration: 2.0ms | Allocations: 1016)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/number/_index.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.8ms | Allocations: 121)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/fields/string/_index.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered fields/enum_field/_index.html.erb (Duration: 1.0ms | Allocations: 110)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_collection.html.erb (Duration: 10.9ms | Allocations: 5723)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/index.html.erb within layouts/administrate/application (Duration: 266.9ms | Allocations: 212736)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_stylesheet.html.erb (Duration: 86.2ms | Allocations: 15253)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_icons.html.erb (Duration: 0.7ms | Allocations: 85)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_navigation.html.erb (Duration: 4.8ms | Allocations: 1437)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_flashes.html.erb (Duration: 0.8ms | Allocations: 214)
+  Rendered /Users/taniarocha/.asdf/installs/ruby/2.7.2/lib/ruby/gems/2.7.0/gems/administrate-0.14.0/app/views/administrate/application/_javascript.html.erb (Duration: 9.7ms | Allocations: 3490)
+  [1m[36mUser Update All (0.7ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:59:54.020792"], ["id", 1]]
+Completed 200 OK in 429ms (Views: 388.2ms | ActiveRecord: 1.2ms | Allocations: 249008)
+
+
+Started DELETE "/admin/users/1" for 127.0.0.1 at 2020-12-17 11:59:56 +0000
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FOjItP6uR1MUnBxXN2BnNUUGSJowBPVvW8qQb/cSZBCPGygn0wKSZRLR9V31lfqpseA9yoHaoUy0NdJwuBLjvA==", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:5000/admin/users
+  [1m[36mUser Update All (0.3ms)[0m  [1m[33mUPDATE "users" SET "last_activity_at" = $1 WHERE "users"."id" = $2[0m  [["last_activity_at", "2020-12-17 11:59:56.700808"], ["id", 1]]
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms | Allocations: 7981)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2020-12-17 11:59:56 +0000
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:5000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1660)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-17 11:59:56 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 2310)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 11:59:57 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 4180)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-17 12:00:00 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 2323)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 12:00:00 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 1.6ms | Allocations: 4179)
+
+
+Started GET "/foods?page=2" for 127.0.0.1 at 2020-12-17 19:18:44 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.7ms | Allocations: 4332)
+
+
+Started GET "/foods?page=3" for 127.0.0.1 at 2020-12-17 19:18:45 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 10]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 4173)
+
+
+Started GET "/admin" for 127.0.0.1 at 2020-12-17 19:29:03 +0000
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:5000/
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms | Allocations: 1774)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-17 19:29:03 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 2323)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 19:29:04 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:42:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:11:in `index'
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 1.2ms | Allocations: 4208)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.2ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Destroy (0.3ms)[0m  [1m[31mDELETE FROM "foods" WHERE "foods"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6440101830672218520)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFoods (20201211200244)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.4ms)[0m  [1m[35mDROP TABLE "foods"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201211200244"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6440101830672218520)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-12-17 19:48:32 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        rails db:migrate RAILS_ENV=development:
+
+Started POST "/__better_errors/da26094588ee9f67/variables" for 127.0.0.1 at 2020-12-17 19:48:32 +0000
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6440101830672218520)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFoods (20201211200244)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying NOT NULL, "parameterized_name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "energy" integer NOT NULL, "fat" decimal NOT NULL, "carbohydrates" decimal NOT NULL, "protein" decimal NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211200244"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6440101830672218520)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6440101830672218520)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFoods (20201211200244)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "information"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "foods"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201211200244"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6440101830672218520)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6440101830672218520)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFoods (20201211200244)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "foods" ("id" bigserial primary key, "name" character varying NOT NULL, "parameterized_name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "energy" integer NOT NULL, "fat" decimal NOT NULL, "carbohydrates" decimal NOT NULL, "protein" decimal NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201211200244"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6440101830672218520)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."name" = $1 LIMIT $2[0m  [["name", "Ovo de galinha cozido"], ["LIMIT", 1]]
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "ovo-de-galinha-cozido"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.7ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ovo de galinha cozido"], ["parameterized_name", "ovo-de-galinha-cozido"], ["created_at", "2020-12-17 19:54:09.303829"], ["updated_at", "2020-12-17 19:54:09.303829"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /Users/taniarocha/Documents/taniarocha/personal/Nutrium/food-search/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "pao-de-mistura-de-trigo-e-centeio"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.4ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pão de mistura de trigo e centeio"], ["parameterized_name", "pao-de-mistura-de-trigo-e-centeio"], ["created_at", "2020-12-17 19:55:43.372478"], ["updated_at", "2020-12-17 19:55:43.372478"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "queijo-flamengo-light-com-menos-50-de-gordura-terra-nostra"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Queijo flamengo light com menos 50% de gordura Terra Nostra"], ["parameterized_name", "queijo-flamengo-light-com-menos-50-de-gordura-terra-nostra"], ["created_at", "2020-12-17 19:55:43.377096"], ["updated_at", "2020-12-17 19:55:43.377096"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "agua-mineral-natural"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Água mineral natural"], ["parameterized_name", "agua-mineral-natural"], ["created_at", "2020-12-17 19:55:43.381100"], ["updated_at", "2020-12-17 19:55:43.381100"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "sopa-de-vegetais"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sopa de vegetais"], ["parameterized_name", "sopa-de-vegetais"], ["created_at", "2020-12-17 19:55:43.384604"], ["updated_at", "2020-12-17 19:55:43.384604"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "azeite"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Azeite"], ["parameterized_name", "azeite"], ["created_at", "2020-12-17 19:55:43.388533"], ["updated_at", "2020-12-17 19:55:43.388533"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "flocos-de-aveia"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flocos de aveia"], ["parameterized_name", "flocos-de-aveia"], ["created_at", "2020-12-17 19:55:43.392182"], ["updated_at", "2020-12-17 19:55:43.392182"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "leite-de-vaca-uht-magro"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFood Create (0.2ms)[0m  [1m[32mINSERT INTO "foods" ("name", "parameterized_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Leite de vaca UHT magro"], ["parameterized_name", "leite-de-vaca-uht-magro"], ["created_at", "2020-12-17 19:55:43.396381"], ["updated_at", "2020-12-17 19:55:43.396381"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE "foods"."parameterized_name" = $1 LIMIT $2[0m  [["parameterized_name", "ovo-de-galinha-cozido"], ["LIMIT", 1]]
+  [1m[36mFood Load (1.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m

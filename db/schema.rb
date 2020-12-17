@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(version: 2020_12_11_200244) do
   create_table "foods", force: :cascade do |t|
     t.string "name", null: false
     t.string "parameterized_name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "information", force: :cascade do |t|
     t.integer "energy", null: false
     t.decimal "fat", null: false
     t.decimal "carbohydrates", null: false
