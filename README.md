@@ -1,9 +1,10 @@
 # Food Search
 
 Food search display a list of food. You can type a name to search a food, order the food list by micronutrient, and create new ones.
+
 Clicking in a food will open a modal with the food info. You can edit the information or delete the food.
+
 I used a rails-starter (https://github.com/aurora-digital/rails-starter) to start the project.
-The project
 
 ## Requisites
 
