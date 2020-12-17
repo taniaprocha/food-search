@@ -2,8 +2,9 @@
 
 class FoodsController < ApplicationController
   def index
-    if params[:search]
-      results = Food.where("parameterized_name like ?", "%#{params[:search]}%")
+    search = params[:search]
+    if search != 'undefined'
+      results = Food.where("parameterized_name like ?", "%#{search}%")
     else
       results = Food.all
     end
