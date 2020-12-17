@@ -36,7 +36,7 @@ class FoodsController < ApplicationController
     elsif order === 'protein'
       ordered_results = results.order(protein: :asc)     
     else
-      ordered_results = results
+      ordered_results = results.order(name: :asc)
     end
 
     return pagy(ordered_results, page: page, items: 5)

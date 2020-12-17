@@ -142,4 +142,9 @@
     border-radius: $spacing-4;
     cursor: pointer;
   }
+
+  .disabled {
+    background-color: rgba(83, 176, 149, 0.4);
+    cursor: not-allowed;
+  }
 }

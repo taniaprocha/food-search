@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 import { createFood, deleteFood, updateFood } from "root/api/foods";
 import Typography from "root/components/Typography";
 
@@ -62,17 +63,18 @@ const Modal = ({ onClose, data }) => {
   };
 
   const renderCreateOrUpdate = () => {
+    let isDisabled = false;
     if (data) {
+      isDisabled =
+        name === data.name &&
+        energy === data.energy &&
+        fat === data.fat &&
+        protein === data.protein &&
+        carbohydrates === data.carbohydrates;
       return (
         <button
-          disabled={
-            name === data.name &&
-            energy === data.energy &&
-            fat === data.fat &&
-            protein === data.protein &&
-            carbohydrates === data.carbohydrates
-          }
-          className={styles.save}
+          disabled={isDisabled}
+          className={classnames(styles.save, { [styles.disabled]: isDisabled })}
           onClick={handleSave}
         >
           <Typography variant="h5" color="white">
@@ -82,12 +84,12 @@ const Modal = ({ onClose, data }) => {
       );
     }
 
+    isDisabled =
+      !name || energy < 0 || fat < 0 || protein < 0 || carbohydrates < 0;
     return (
       <button
-        disabled={
-          !name || energy < 0 || fat < 0 || protein < 0 || carbohydrates < 0
-        }
-        className={styles.save}
+        disabled={isDisabled}
+        className={classnames(styles.save, { [styles.disabled]: isDisabled })}
         onClick={handleCreate}
       >
         <Typography variant="h5" color="white">
