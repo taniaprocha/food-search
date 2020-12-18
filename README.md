@@ -20,7 +20,7 @@ Use [asdf-vm](https://github.com/asdf-vm/asdf) to handle with Ruby and Node inst
 
 # Developing
 
-To facilitate the initial setup, this project started with the rails-starter: https://github.com/aurora-digital/rails-starter.
+To facilitate the initial setup, this project started with a starter: https://github.com/aurora-digital/rails-starter.
 
 Run `bin/setup` to get everything up and running.
 

@@ -33550,3 +33550,292 @@ Processing by FoodsController#index as */*
 Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 4051)
 
 
+Started GET "/foods?search=s&order=protein&page=1" for 127.0.0.1 at 2020-12-17 22:27:06 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"s", "order"=>"protein", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%s%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%s%') ORDER BY "foods"."protein" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 25ms (Views: 8.8ms | ActiveRecord: 7.0ms | Allocations: 11178)
+
+
+Started GET "/foods?search=s&order=carbohydrates&page=1" for 127.0.0.1 at 2020-12-17 22:27:08 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"s", "order"=>"carbohydrates", "page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%s%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%s%') ORDER BY "foods"."carbohydrates" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 4060)
+
+
+Started GET "/foods?search=s&order=carbohydrates&page=2" for 127.0.0.1 at 2020-12-17 22:27:10 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"s", "order"=>"carbohydrates", "page"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%s%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms | Allocations: 2650)
+
+
+
+Pagy::OverflowError - expected :page in 1..1; got 2:
+  app/controllers/foods_controller.rb:43:in `ordered_results'
+  app/controllers/foods_controller.rb:12:in `index'
+
+Started GET "/" for 127.0.0.1 at 2020-12-17 22:27:25 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 2471)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 22:27:25 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 1.0ms | Allocations: 4204)
+
+
+Started GET "/foods?page=2" for 127.0.0.1 at 2020-12-17 22:27:27 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 5]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 4062)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 22:27:28 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 4215)
+
+
+Started GET "/foods?search=undefined&order=fat&page=1" for 127.0.0.1 at 2020-12-17 22:27:31 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"undefined", "order"=>"fat", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."fat" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 4167)
+
+
+Started GET "/foods?search=undefined&order=fat&page=2" for 127.0.0.1 at 2020-12-17 22:27:32 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"undefined", "order"=>"fat", "page"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."fat" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 4], ["OFFSET", 5]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 4021)
+
+
+Started GET "/foods?search=undefined&order=fat&page=1" for 127.0.0.1 at 2020-12-17 22:27:33 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"undefined", "order"=>"fat", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods"[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" ORDER BY "foods"."fat" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 4174)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 22:27:35 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 4225)
+
+
+Started GET "/foods?search=a&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:36 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"a", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%a%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%a%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 4215)
+
+
+Started GET "/foods?search=as&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:37 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"as", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%as%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%as%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 3395)
+
+
+Started GET "/foods?search=a&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:38 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"a", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%a%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%a%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 4229)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 22:27:39 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 4197)
+
+
+Started GET "/foods?search=o&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:40 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"o", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%o%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%o%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 4229)
+
+
+Started GET "/foods?search=ok&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:40 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"ok", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%ok%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%ok%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 3407)
+
+
+Started GET "/foods?search=o&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:41 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"o", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%o%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%o%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 4223)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 22:27:41 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 4215)
+
+
+Started GET "/foods?search=o&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:42 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"o", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%o%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%o%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 4213)
+
+
+Started GET "/foods?search=oc&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:42 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"oc", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%oc%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%oc%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 3560)
+
+
+Started GET "/foods?search=o&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:43 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"o", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%o%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%o%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 4227)
+
+
+Started GET "/foods?page=1" for 127.0.0.1 at 2020-12-17 22:27:44 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 4215)
+
+
+Started GET "/foods?search=o&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:44 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"o", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%o%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%o%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 4225)
+
+
+Started GET "/foods?search=os&order=&page=1" for 127.0.0.1 at 2020-12-17 22:27:44 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"os", "order"=>"", "page"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%os%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods" WHERE (parameterized_name like '%os%') ORDER BY "foods"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/controllers/foods_controller.rb:12:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 3725)
+
+
+Started GET "/foods?search=os&order=&page=2" for 127.0.0.1 at 2020-12-17 22:27:47 +0000
+Processing by FoodsController#index as */*
+  Parameters: {"search"=>"os", "order"=>"", "page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "foods" WHERE (parameterized_name like '%os%')[0m
+  ↳ app/controllers/foods_controller.rb:43:in `ordered_results'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 2670)
+
+
+
+Pagy::OverflowError - expected :page in 1..1; got 2:
+  app/controllers/foods_controller.rb:43:in `ordered_results'
+  app/controllers/foods_controller.rb:12:in `index'
+
